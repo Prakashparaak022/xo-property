@@ -1,16 +1,25 @@
-// components/Footer.js
 import React from "react";
-import {
-  FaYoutube,
-  FaTiktok,
-  FaInstagram,
-  FaLinkedin,
-  FaCaretDown,
-} from "react-icons/fa";
+import { FaYoutube, FaTiktok, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaWhatsapp, FaPhone } from "react-icons/fa";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import Link from "next/link"; // For Next.js routing
 
 const Footer = () => {
+  const navLinks = [
+    { name: "Sales", href: "/sales" },
+    { name: "Off Plan", href: "/offplan" },
+    { name: "Finance", href: "/financing-property" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ];
+
+  const aboutLinks = [
+    { name: "About us", href: "/about" },
+    { name: "Meet the Team", href: "" },
+    { name: "Careers", href: "" },
+    { name: "News & Insights", href: "" },
+  ];
+
   return (
     <footer className="bg-black text-white py-8 px-4 md:px-4 lg:px-8 relative">
       <div className="mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -18,10 +27,15 @@ const Footer = () => {
         <div>
           <h3 className="mb-2 text-lg">What We Do</h3>
           <ul className="text-lg space-y-2">
-            <li>Sales</li>
-            <li>Rent</li>
-            <li>Off Plan</li>
-            <li>Valuations</li>
+            {navLinks.map((link) => (
+              <li key={link.name}>
+                <Link href={link.href}>
+                  <span className="text-white hover:underline">
+                    {link.name}
+                  </span>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -29,10 +43,19 @@ const Footer = () => {
         <div>
           <h3 className="mb-2 text-lg">About</h3>
           <ul className="text-lg space-y-2">
-            <li>About us</li>
-            <li>Meet the Team</li>
-            <li>Careers</li>
-            <li>News & Insights</li>
+            {aboutLinks.map((link) => (
+              <li key={link.name}>
+                {link.href ? (
+                  <Link href={link.href}>
+                    <span className="text-white hover:underline">
+                      {link.name}
+                    </span>
+                  </Link>
+                ) : (
+                  <span className="text-white">{link.name}</span>
+                )}
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -71,7 +94,7 @@ const Footer = () => {
         <div className="flex flex-col justify-between items-start">
           <div>Terms & Conditions / Privacy Policy / Sitemap</div>
           <div className="mt-2 md:mt-0">
-            © 2025 KNMGMG Property, All Rights Reserved
+            © 2025 KNMG Property, All Rights Reserved
           </div>
         </div>
       </div>
