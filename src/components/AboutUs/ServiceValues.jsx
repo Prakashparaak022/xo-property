@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ServiceValues = () => {
   return (
     <section className="py-16 bg-white">
@@ -51,9 +53,11 @@ const ServiceValues = () => {
 
           {/* Contact Button */}
           <div className="mt-8">
-            <button className="border-2 border-black text-black px-6 py-3 font-medium w-fit  hover:text-white hover:bg-black transition">
-              Contact Us
-            </button>
+            <Link href="/contact">
+              <button className="border-2 border-black text-black px-6 py-3 font-medium w-fit  hover:text-white hover:bg-black transition">
+                Contact Us
+              </button>
+            </Link>
           </div>
         </div>
       </div>

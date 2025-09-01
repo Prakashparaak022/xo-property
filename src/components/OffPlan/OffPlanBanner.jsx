@@ -1,3 +1,4 @@
+import Link from "next/link";
 import StyledButton from "../Common/StyledButton";
 
 export default function OffPlanBanner() {
@@ -21,7 +22,9 @@ export default function OffPlanBanner() {
         </p>
         <div className="flex flex-col md:flex-row gap-4 md:gap-6">
           <StyledButton variant="white-filled">off-Plan Projects</StyledButton>
-          <StyledButton variant="white-outlined">Contact us</StyledButton>
+          <Link href="/contact">
+            <StyledButton variant="white-outlined">Contact us</StyledButton>
+          </Link>
         </div>
       </div>
     </section>

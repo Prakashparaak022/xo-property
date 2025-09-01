@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const AboutHero = () => {
   return (
     <section className="relative flex justify-center items-center h-screen">
@@ -17,9 +19,11 @@ const AboutHero = () => {
             <button className="bg-white text-black px-6 py-3 font-medium w-fit hover:bg-black hover:text-white transition">
               List Your Property
             </button>
-            <button className="border-2 border-white text-white px-6 py-3 font-medium w-fit hover:bg-black hover:border-black transition">
-              Contact Us
-            </button>
+            <Link href="/contact">
+              <button className="border-2 border-white text-white px-6 py-3 font-medium w-fit hover:bg-black hover:border-black transition">
+                Contact Us
+              </button>
+            </Link>
           </div>
         </div>
       </div>

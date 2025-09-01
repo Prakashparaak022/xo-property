@@ -86,7 +86,7 @@ const OffPlanDetails = () => {
       <div>
         <p className="mt-2 text-lg text-gray-700">
           View <a className="underline">current off-plan listings</a> or{" "}
-          <a className="underline">get in touch</a> to speak with a specialist.
+          <a className="underline" href="/enquiry">get in touch</a> to speak with a specialist.
         </p>
       </div>
       <div>
