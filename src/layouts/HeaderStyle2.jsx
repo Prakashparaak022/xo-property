@@ -1,4 +1,5 @@
 "use client";
+import Logo from "@/components/Common/Logo";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -19,7 +20,7 @@ export default function HeaderStyle2() {
       <div className="mx-auto flex items-center justify-between px-6 py-6">
         {/* Logo */}
         <Link href="/">
-          <img src={`logo-black.svg`} alt="logo" />
+          <Logo />
         </Link>
 
         {/* Desktop Nav */}

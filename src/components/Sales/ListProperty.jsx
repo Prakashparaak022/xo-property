@@ -9,7 +9,8 @@ const ListProperty = () => {
             Ready to list your property?
           </h2>
           <p className="text-lg text-gray-700">
-            Partner with XO Property and experience a seamless selling process.
+            Partner with KNMG Property and experience a seamless selling
+            process.
             <a>Our team of experts</a> will guide you every step of the way,
             providing market insights, professional marketing, and dedicated
             support. Let us help you showcase your property to the right buyers

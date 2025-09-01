@@ -37,7 +37,7 @@ export default function About() {
           {/* Button*/}
           <div className="flex items-center gap-6 mt-6">
             <button className="border border-black px-6 py-3 text-black font-medium hover:bg-black hover:text-white transition">
-              About XO
+              About KNMG
             </button>
           </div>
         </div>

@@ -10,7 +10,7 @@ const AboutHero = () => {
       <div className="relative w-full z-10 flex flex-col md:flex-row items-center justify-start space-x-8 py-16 px-6 md:px-30">
         <div className="w-full md:w-1/2 text-center md:text-left space-y-4">
           <h2 className="text-3xl font-semibold text-white">
-            The XO Property Story
+            The KNMG Property Story
           </h2>
           <p className="text-lg text-white">Get to know us.</p>
           <div className="mt-4 flex justify-center md:justify-start space-x-4">

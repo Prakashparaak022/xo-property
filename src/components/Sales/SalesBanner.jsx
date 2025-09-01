@@ -15,7 +15,7 @@ export default function SalesBanner() {
           Buy Property in Dubai with Trusted Experts
         </h1>
         <p className="text-base md:text-xl mb-8">
-          Find your next home or investment in Dubai with XO Property. From
+          Find your next home or investment in Dubai with KNMG Property. From
           waterfront apartments to spacious villas, our brokers will guide you
           through every step of the buying process.
         </p>

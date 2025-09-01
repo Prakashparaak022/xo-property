@@ -1,5 +1,5 @@
 import AboutHero from "@/components/AboutUs/AboutHero";
-import AboutXO from "@/components/AboutUs/AboutXO";
+import AboutKNMG from "@/components/AboutUs/AboutKNMG";
 import AgencyStory from "@/components/AboutUs/AgencyStory";
 import ServiceValues from "@/components/AboutUs/ServiceValues";
 import LayoutStyle1 from "@/layouts/LayoutStyle1";
@@ -11,7 +11,7 @@ const About = () => {
         <AboutHero />
         <AgencyStory />
         <ServiceValues />
-        <AboutXO />
+        <AboutKNMG />
       </main>
     </LayoutStyle1>
   );

@@ -63,7 +63,7 @@ const OffPlanDetails = () => {
         </p>
       </div>
       <div>
-        <h2 className="text-xl font-semibold">Working with XO Property</h2>
+        <h2 className="text-xl font-semibold">Working with KNMG Property</h2>
         <p className="mt-2 text-lg text-gray-700">
           We provide access to a curated range of off-plan developments across
           Dubai, including exclusive launches and master-planned communities.

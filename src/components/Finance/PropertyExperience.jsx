@@ -8,7 +8,7 @@ export default function PropertyExperience() {
         </h2>
         <p className="text-lg leading-relaxed mb-6">
           Searching for a team of dedicated and passionate professionals to
-          assist in selling or letting your property? Look no further than XO
+          assist in selling or letting your property? Look no further than KNMG
           Property Estate Agents. Reach out to us today to discover how we can
           help you achieve your property goals.
         </p>

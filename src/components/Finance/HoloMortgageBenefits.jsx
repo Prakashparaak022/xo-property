@@ -5,17 +5,16 @@ const HoloMortgageBenefits = () => {
     <div className="py-6 md:py-10">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
         {/* section 1 */}
-        <div className="md:w-1/2">
-          <img
-            src="/assets/images/finance/xo-holo.webp"
-            alt="Property Overview"
-            className="w-full md:max-h-[500px] object-cover"
-          />
+        <div className="min-h-screen w-full md:w-1/2 bg-black flex items-center justify-center">
+          <span className="text-white text-6xl md:text-8xl font-bold">
+            KNMG
+          </span>
         </div>
+
         <div className="md:w-1/2 px-4 md:px-8">
           <div className="space-y-6 px-4 md:px-6">
             <h2 className="text-3xl font-semibold">
-              Why choose XO Property and Holo?
+              Why choose KNMG Property and Holo?
             </h2>
             <p className="text-lg text-gray-700">
               <span className="font-semibold">
@@ -46,7 +45,7 @@ const HoloMortgageBenefits = () => {
             </p>
             <p className="text-lg text-gray-700">
               <span className="font-semibold">Expert guidance:</span> As a
-              client of XO Property, you’ll benefit from personalised support
+              client of KNMG Property, you’ll benefit from personalised support
               throughout your home-buying journey, from finding the perfect
               property to securing the right{" "}
               <span className="font-semibold">
@@ -64,7 +63,7 @@ const HoloMortgageBenefits = () => {
           <div className="space-y-6 px-4 md:px-6">
             <h2 className="text-3xl font-semibold">Get started today!</h2>
             <p className="text-lg text-gray-700">
-              Take the first step toward financing your dream home with XO
+              Take the first step toward financing your dream home with KNMG
               Property and <span className="font-semibold">Holo.</span> Click
               the button below to explore your mortgage options and start your
               application today!

@@ -39,9 +39,9 @@ const Footer = () => {
         {/* Column 3: Contact */}
         <div>
           <ul className="text-lg space-y-2">
-            <h3 className="mb-2 text-lg">Contact XO Property</h3>
+            <h3 className="mb-2 text-lg">Contact KNMG Property</h3>
             <p>(04) 433 0046</p>
-            <p>info@xoproperty.ae</p>
+            <p>info@knmgproperty.ae</p>
             <p>Office No. 202, Daytona House, Motor City, Dubai, UAE</p>
           </ul>
         </div>
@@ -71,7 +71,7 @@ const Footer = () => {
         <div className="flex flex-col justify-between items-start">
           <div>Terms & Conditions / Privacy Policy / Sitemap</div>
           <div className="mt-2 md:mt-0">
-            © 2025 XO Property, All Rights Reserved
+            © 2025 KNMGMG Property, All Rights Reserved
           </div>
         </div>
       </div>

@@ -27,7 +27,7 @@ const ServiceValues = () => {
                 <span className="text-lg font-medium text-black">
                   Client-Centric Approach:
                 </span>
-                At XO we prioritise the individual needs of each client,
+                At KNMG we prioritise the individual needs of each client,
                 offering tailored solutions rather than a one-size-fits-all
                 service. This can include personalised property searches,
                 bespoke marketing strategies for sellers and customised
@@ -72,8 +72,8 @@ const ServiceValues = () => {
                 <span className="text-lg font-medium">
                   Data-Driven Insights:
                 </span>
-                XO uses advanced CRM systems and technology tools to gather and
-                analyse client preferences, enabling agents to offer
+                KNMG uses advanced CRM systems and technology tools to gather
+                and analyse client preferences, enabling agents to offer
                 personalised property recommendations and market insights.
               </p>
             </div>

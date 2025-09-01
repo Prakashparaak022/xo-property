@@ -2,9 +2,9 @@ import { FaBook, FaBriefcase, FaSearch } from "react-icons/fa";
 
 export default function Mission() {
   const title =
-    "Our mission at XO is to empower you. Selecting the right property is one of the most important decisions you'll ever make.";
+    "Our mission at KNMG is to empower you. Selecting the right property is one of the most important decisions you'll ever make.";
   const content1 = `As one of the leading real estate companies in Dubai, our mission extends beyond simply selling or renting properties; we strive to equip you with the knowledge, insights, market data, and confidence necessary to make informed decisions that align with your aspirations.`;
-  const content2 = `Finding reliable real estate agents in Dubai can be overwhelming due to the abundance of choices. At XO, we prioritize transparency and clarity, guiding you through every step of the process. Whether you're buying, selling, renting, or managing property, our team of highly skilled real estate brokers is here to ensure that your experience is seamless and stress-free.`;
+  const content2 = `Finding reliable real estate agents in Dubai can be overwhelming due to the abundance of choices. At KNMG, we prioritize transparency and clarity, guiding you through every step of the process. Whether you're buying, selling, renting, or managing property, our team of highly skilled real estate brokers is here to ensure that your experience is seamless and stress-free.`;
   const exploreList = [
     {
       icon: FaSearch,
@@ -16,7 +16,7 @@ export default function Mission() {
     },
     {
       icon: FaBriefcase,
-      title: "Careers at XO Property",
+      title: "Careers at KNMG Property",
     },
   ];
   return (
@@ -33,7 +33,7 @@ export default function Mission() {
 
       {/* Right Column */}
       <div className="col-span-12 lg:col-span-4">
-        <h2 className="text-4xl mb-4">Explore XO Property</h2>
+        <h2 className="text-4xl mb-4">Explore KNMG Property</h2>
         <ul className="space-y-4 p-2">
           {exploreList.map((item, index) => (
             <li key={index} className="flex items-center">

@@ -91,7 +91,7 @@ const ContactForm = () => {
   return (
     <div className="max-w-3xl mx-auto pt-20">
       <h2 className="text-lg md:text-xl font-semibold text-center mb-6">
-        Contact XO Property Estate Agents
+        Contact KNMG Property Estate Agents
       </h2>
       <p className="text-2xl md:text-4xl font-semibold text-center mb-10">
         We're here to answer questions or connect you with the right people.

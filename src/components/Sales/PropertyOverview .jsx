@@ -12,7 +12,9 @@ const PropertyOverview = () => {
       </div>
       <div className="md:w-1/2">
         <div className="space-y-6 px-4 md:px-6">
-          <h2 className="text-3xl font-semibold">Buy or sell with XO today.</h2>
+          <h2 className="text-3xl font-semibold">
+            Buy or sell with KNMG today.
+          </h2>
           <p className="text-lg text-gray-700">
             Whether you're looking to buy a home for your family, investing in a
             property, or looking to maximise your sale price, we provide the

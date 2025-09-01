@@ -5,7 +5,7 @@ const AgencyStory = () => {
         {/* Left Section */}
         <div className="md:w-1/2 space-y-4">
           <h2 className="text-4xl font-semibold text-black">
-            XO was conceptualised as an agency which thrives on
+            KNMG was conceptualised as an agency which thrives on
             <br />
             collaboration, communication and an engaging work culture.
           </h2>
@@ -14,13 +14,13 @@ const AgencyStory = () => {
         {/* Right Section */}
         <div className="md:w-1/2 space-y-4">
           <p className="text-lg text-gray-700">
-            After more than 20 years in the industry, the XO management team
+            After more than 20 years in the industry, the KNMG management team
             identified a gap in the market for a personable, flexible, and
-            mature agency. We are committed to preserving the boutique values
-            on which we were founded, ensuring that our clients always know
-            they are our top priority. For many of our clients, this will be
-            the largest purchase of their lives, and we are here to support
-            them throughout the entire journey.
+            mature agency. We are committed to preserving the boutique values on
+            which we were founded, ensuring that our clients always know they
+            are our top priority. For many of our clients, this will be the
+            largest purchase of their lives, and we are here to support them
+            throughout the entire journey.
           </p>
         </div>
       </div>

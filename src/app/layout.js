@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "xo  property",
+  title: "knmg  property",
   description: "Real Estate Website",
 };
 
