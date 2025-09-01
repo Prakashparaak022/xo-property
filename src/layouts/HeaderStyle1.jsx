@@ -8,7 +8,7 @@ export default function HeaderStyle1() {
 
   const navLinks = [
     { name: "Sales", href: "/sales" },
-    { name: "Off Plan", href: "#" },
+    { name: "Off Plan", href: "/offplan" },
     { name: "Finance", href: "/financing-property" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
