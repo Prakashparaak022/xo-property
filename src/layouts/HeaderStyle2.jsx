@@ -1,10 +1,9 @@
 "use client";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-export default function Header() {
+export default function HeaderStyle2() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
     { name: "Sales", href: "#" },
@@ -15,35 +14,13 @@ export default function Header() {
     { name: "Contact", href: "/contact" },
   ];
 
-  // Detect scroll position
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-white shadow-sm" : "bg-transparent"
-      }`}>
+      className={`static top-0 w-full z-50 transition-all duration-300 bg-white shadow-sm`}>
       <div className="mx-auto flex items-center justify-between px-6 py-6">
         {/* Logo */}
         <Link href="/">
-          <img
-            src={`${scrolled ? `logo-black.svg` : `logo-white.svg`}`}
-            alt="logo"
-          />
+          <img src={`logo-black.svg`} alt="logo" />
         </Link>
 
         {/* Desktop Nav */}
@@ -52,9 +29,7 @@ export default function Header() {
             <Link
               key={link.name}
               href={link.href}
-              className={`${
-                scrolled ? "text-gray-700 hover:text-black" : "text-white"
-              } text-base md:text-md lg:text-lg transition duration-300`}>
+              className="text-gray-700 hover:text-black">
               {link.name}
             </Link>
           ))}
@@ -68,7 +43,7 @@ export default function Header() {
             fill="none"
             stroke="currentColor"
             strokeWidth="1.5"
-            className={`w-6 h-6 ${scrolled ? "text-black" : "text-white"}`} // Dynamic color
+            className={`w-6 h-6 text-black`}
             viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
@@ -83,9 +58,7 @@ export default function Header() {
           </svg>
           {/* Dynamic Text Color */}
           <span
-            className={`${
-              scrolled ? "text-gray-700 hover:text-black" : "text-white"
-            } transition duration-300`}>
+            className={`text-gray-700 hover:text-black transition duration-300`}>
             WhatsApp
           </span>
         </div>
@@ -106,9 +79,7 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`${
-                  scrolled ? "text-gray-700 hover:text-black" : "text-white"
-                } transition duration-300`}
+                className={`text-gray-700 hover:text-black transition duration-300`}
                 onClick={() => setIsOpen(false)}>
                 {link.name}
               </Link>
@@ -120,7 +91,7 @@ export default function Header() {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.5"
-                className={`w-6 h-6 ${scrolled ? "text-black" : "text-white"} duration-300`}
+                className={`w-6 h-6 text-black duration-300`}
                 viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
@@ -134,9 +105,7 @@ export default function Header() {
                 />
               </svg>
               <span
-                className={`${
-                  scrolled ? "text-gray-700 hover:text-black" : "text-white"
-                } transition duration-300`}>
+                className={`text-gray-700 hover:text-black transition duration-300`}>
                 WhatsApp
               </span>
             </div>

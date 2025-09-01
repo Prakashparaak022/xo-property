@@ -1,14 +1,14 @@
-import ContactUs from "@/components/ContactUs/ContactUs";
+import ContactForm from "@/components/ContactUs/ContactForm";
 import LayoutStyle2 from "@/layouts/LayoutStyle2";
 
-const Contact = () => {
+const Enquiry = () => {
   return (
     <LayoutStyle2>
       <main>
-        <ContactUs />
+        <ContactForm />
       </main>
     </LayoutStyle2>
   );
 };
 
-export default Contact;
+export default Enquiry;

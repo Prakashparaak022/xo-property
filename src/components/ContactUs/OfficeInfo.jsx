@@ -15,19 +15,6 @@ const OfficeInfo = () => {
             objectFit="cover"
           />
         </div>
-
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-800">
-          <div>
-            <h2 className="text-xl font-semibold">XO Property</h2>
-            <p className="text-gray-600 mt-1">
-              Office No. 202, Daytona House, Motor City, Dubai, UAE
-            </p>
-          </div>
-          <div>
-            <p className="font-semibold text-black">(04) 565 3718</p>
-            <p className="text-gray-600">info@xoproperty.ae</p>
-          </div>
-        </div>
       </div>
     </div>
   );

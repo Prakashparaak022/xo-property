@@ -5,10 +5,11 @@ import Hero from "@/components/HeroPage";
 import Mission from "@/components/Mission";
 import Stats from "@/components/Stats";
 import Valuation from "@/components/Valuation";
+import LayoutStyle1 from "@/layouts/LayoutStyle1";
 
 export default function Home() {
   return (
-    <>
+    <LayoutStyle1>
       <Hero />
       <Mission />
       <Stats />
@@ -16,6 +17,6 @@ export default function Home() {
       <FeaturedProperties />
       <DubaiInspiration />
       <Valuation />
-    </>
+    </LayoutStyle1>
   );
 }
