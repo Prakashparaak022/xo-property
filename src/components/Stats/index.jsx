@@ -7,7 +7,7 @@ export default function Stats() {
   ];
 
   return (
-    <section className="w-full sm:py-8 lg:py-16 bg-white">
+    <section className="w-full py-4 lg:py-8 bg-white">
       <div className="mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center">
         {stats.map((stat, index) => (
           <div key={index}>

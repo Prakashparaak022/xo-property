@@ -6,8 +6,7 @@ export default function HeaderStyle2() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Sales", href: "#" },
-    { name: "Rent", href: "#" },
+    { name: "Sales", href: "/sales" },
     { name: "Off Plan", href: "#" },
     { name: "Finance", href: "#" },
     { name: "About", href: "/about" },

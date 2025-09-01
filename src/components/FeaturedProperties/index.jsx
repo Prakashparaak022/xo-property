@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const properties = [
   {
@@ -26,15 +27,19 @@ const properties = [
 
 export default function FeaturedProperties() {
   return (
-    <section className="w-full bg-white py-16">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="w-full bg-white py-6 md:py-10">
+      <div className="px-6 md:px-16">
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900">
             Featured Properties
           </h2>
-          <p className="text-gray-600 mt-2">
-            Have a specific request? <span className="font-medium">and we will help you.</span>
+          <p className="text-gray-600 text-md mt-2 md:mt-4">
+            <span className="font-bold">Have a specific request? </span>
+            <Link href="/enquiry" className="underline">
+              Get in touch
+            </Link>{" "}
+            and we will help you.
           </p>
         </div>
 

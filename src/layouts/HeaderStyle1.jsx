@@ -7,8 +7,7 @@ export default function HeaderStyle1() {
   const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
-    { name: "Sales", href: "#" },
-    { name: "Rent", href: "#" },
+    { name: "Sales", href: "/sales" },
     { name: "Off Plan", href: "#" },
     { name: "Finance", href: "#" },
     { name: "About", href: "/about" },
@@ -92,7 +91,9 @@ export default function HeaderStyle1() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-700 text-2xl"
+          className={`md:hidden ${
+            scrolled ? "text-gray-700" : "text-white"
+          } text-2xl`}
           onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? "✖" : "☰"}
         </button>
@@ -120,7 +121,9 @@ export default function HeaderStyle1() {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.5"
-                className={`w-6 h-6 ${scrolled ? "text-black" : "text-white"} duration-300`}
+                className={`w-6 h-6 ${
+                  scrolled ? "text-black" : "text-white"
+                } duration-300`}
                 viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"

@@ -1,4 +1,4 @@
-import Footer from "./footer";
+import Footer from "./Footer";
 import HeaderStyle2 from "./HeaderStyle2";
 
 const LayoutStyle2 = ({ children }) => {

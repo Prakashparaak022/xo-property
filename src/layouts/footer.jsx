@@ -77,7 +77,7 @@ const Footer = () => {
       </div>
 
       {/* Floating Buttons */}
-      <div className="fixed bottom-4 right-4 flex flex-col text-lg space-y-2">
+      <div className="fixed bottom-4 right-4 flex text-lg space-x-2">
         <button className="bg-green-500 text-white rounded-full p-3">
           <FaWhatsapp className="text-2xl" />
         </button>

@@ -1,0 +1,34 @@
+import StyledButton from "../Common/StyledButton";
+
+const ListProperty = () => {
+  return (
+    <div className="flex flex-col md:flex-row justify-between items-center py-6 md:py-10 gap-4">
+      <div className="md:w-1/2">
+        <div className="space-y-10 px-4 md:px-6">
+          <h2 className="text-3xl font-semibold">
+            Ready to list your property?
+          </h2>
+          <p className="text-lg text-gray-700">
+            Partner with XO Property and experience a seamless selling process.
+            <a>Our team of experts</a> will guide you every step of the way,
+            providing market insights, professional marketing, and dedicated
+            support. Let us help you showcase your property to the right buyers
+            and achieve the best results. Start your journey with us today!
+          </p>
+          <StyledButton variant="black-outlined">
+            List your property
+          </StyledButton>
+        </div>
+      </div>
+      <div className="md:w-1/2">
+        <img
+          src="/assets/images/sales/list-property.webp"
+          alt="Property Overview"
+          className="w-full max-h-[600px] object-cover"
+        />
+      </div>
+    </div>
+  );
+};
+
+export default ListProperty;
