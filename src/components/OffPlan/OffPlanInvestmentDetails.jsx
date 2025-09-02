@@ -4,7 +4,7 @@ const OffPlanDetails = () => {
   return (
     <div className="space-y-8 p-4 md:p-10">
       <div>
-        <h1 className="text-3xl md:text-4xl font-semibold mb-4">
+        <h1 className="text-2xl md:text-4xl font-semibold mb-5">
           Dubai is a city that’s constantly evolving and one of the most
           exciting ways to be part of its growth is through off-plan property
           investments.
@@ -86,7 +86,10 @@ const OffPlanDetails = () => {
       <div>
         <p className="mt-2 text-lg text-gray-700">
           View <a className="underline">current off-plan listings</a> or{" "}
-          <a className="underline" href="/enquiry">get in touch</a> to speak with a specialist.
+          <a className="underline" href="/enquiry">
+            get in touch
+          </a>{" "}
+          to speak with a specialist.
         </p>
       </div>
       <div>
