@@ -8,10 +8,10 @@ export default function HeaderStyle1() {
   const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
+    { name: "About", href: "/about" },
     { name: "Sales", href: "/sales" },
     { name: "Off Plan", href: "/offplan" },
     { name: "Finance", href: "/financing-property" },
-    { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
 
