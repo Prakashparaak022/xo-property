@@ -1,4 +1,4 @@
-import AboutHero from "@/components/AboutUs/AboutHero";
+import AboutBanner from "@/components/AboutUs/AboutBanner";
 import AboutKNMG from "@/components/AboutUs/AboutKNMG";
 import AgencyStory from "@/components/AboutUs/AgencyStory";
 import ServiceValues from "@/components/AboutUs/ServiceValues";
@@ -8,7 +8,7 @@ const About = () => {
   return (
     <LayoutStyle1>
       <main>
-        <AboutHero />
+        <AboutBanner />
         <AgencyStory />
         <ServiceValues />
         <AboutKNMG />
