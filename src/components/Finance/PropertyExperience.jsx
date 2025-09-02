@@ -1,9 +1,11 @@
+import StyledButton from "../Common/StyledButton";
+
 export default function PropertyExperience() {
   return (
-    <div className="flex flex-col md:flex-row h-screen">
+    <div className="flex flex-col md:flex-row">
       {/* Left section - text */}
-      <div className="bg-black text-white flex flex-col justify-center py-4 md:py-8 px-8 md:px-16 w-full md:w-1/2">
-        <h2 className="text-2xl md:text-4xl font-semibold mb-6">
+      <div className="bg-black text-white flex flex-col justify-center p-4 md:p-10 w-full md:w-1/2">
+        <h2 className="text-2xl md:text-4xl font-semibold mb-5">
           Delivering a Smooth and Enjoyable Property Experience.
         </h2>
         <p className="text-lg leading-relaxed mb-6">
@@ -12,9 +14,9 @@ export default function PropertyExperience() {
           Property Estate Agents. Reach out to us today to discover how we can
           help you achieve your property goals.
         </p>
-        <button className="bg-white border-2 border-white text-black px-10 py-3 rounded font-medium w-fit hover:bg-black hover:text-white transition">
+        <StyledButton variant="white-filled">
           Find out more
-        </button>
+        </StyledButton>
       </div>
 
       {/* Right section - image */}
