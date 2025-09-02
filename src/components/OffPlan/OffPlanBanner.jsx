@@ -20,8 +20,8 @@ export default function OffPlanBanner() {
           exclusive projects, flexible payment plans and expert, market-led
           guidance every step of the way.
         </p>
-        <div className="flex flex-col md:flex-row gap-4 md:gap-6">
-          <StyledButton variant="white-filled">off-Plan Projects</StyledButton>
+        <div className="w-full flex flex-col md:flex-row gap-4 md:gap-6">
+          <StyledButton variant="white-filled">Off-Plan Projects</StyledButton>
           <Link href="/contact">
             <StyledButton variant="white-outlined">Contact us</StyledButton>
           </Link>
