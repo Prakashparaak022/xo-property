@@ -105,9 +105,7 @@ export default function HeaderStyle1() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`${
-                  scrolled ? "text-gray-700 hover:text-black" : "text-white"
-                } transition duration-300`}
+                className="text-gray-700 hover:text-black transition duration-300"
                 onClick={() => setIsOpen(false)}>
                 {link.name}
               </Link>
@@ -119,9 +117,7 @@ export default function HeaderStyle1() {
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="1.5"
-                className={`w-6 h-6 ${
-                  scrolled ? "text-black" : "text-white"
-                } duration-300`}
+                className="w-6 h-6text-black duration-300"
                 viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
@@ -134,10 +130,7 @@ export default function HeaderStyle1() {
                   d="M21 12c0 4.97-4.03 9-9 9a8.97 8.97 0 0 1-4.44-1.19L3 21l1.23-4.57A9 9 0 1 1 21 12z"
                 />
               </svg>
-              <span
-                className={`${
-                  scrolled ? "text-gray-700 hover:text-black" : "text-white"
-                } transition duration-300`}>
+              <span className="text-gray-700 hover:text-black transition duration-300">
                 WhatsApp
               </span>
             </div>

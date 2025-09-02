@@ -27,11 +27,11 @@ const properties = [
 
 export default function FeaturedProperties() {
   return (
-    <section className="w-full bg-white py-6 md:py-10">
+    <section className="py-5 md:py-10">
       <div className="px-6 md:px-16">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900">
+          <h2 className="text-2xl md:text-4xl font-semibold mb-5">
             Featured Properties
           </h2>
           <p className="text-gray-600 text-md mt-2 md:mt-4">

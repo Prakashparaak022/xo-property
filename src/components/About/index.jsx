@@ -1,21 +1,19 @@
-import Image from "next/image";
 export default function About() {
   return (
-    <section className="w-full h-screen bg-white py-4 sm:py-8 lg:py-16">
-      <div className="h-full grid grid-cols-1 lg:grid-cols-2">
+    <section className="py-5 md:py-10">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
         {/* Left Image */}
-        <div className="relative w-full h-full">
-          <Image
+        <div className="md:w-1/2">
+          <img
             src="/assets/images/about.webp"
-            alt="Team"
-            fill
-            className="object-cover"
+            alt="Property Overview"
+            className="w-full md:max-h-[600px] object-cover"
           />
         </div>
 
         {/* Right Content */}
-        <div className="flex flex-col justify-center px-6 lg:px-16">
-          <h2 className="text-3xl lg:text-4xl font-semibold text-gray-900 mb-6">
+        <div className="md:w-1/2 px-6 lg:px-20">
+          <h2 className="text-2xl md:text-4xl font-semibold mb-5">
             Your trusted partner in achieving your vision
           </h2>
 
@@ -23,9 +21,8 @@ export default function About() {
             Our deep understanding of the Dubai real estate market allows us to
             provide tailored solutions that meet your unique needs. We are not
             just another{" "}
-            <span className="underline">real estate brokerage in Dubai</span>;
-            we are your partners who provide you with knowledge, data and
-            expertise.
+            <a className="underline">real estate brokerage in Dubai</a>; we are
+            your partners who provide you with knowledge, data and expertise.
           </p>
 
           <p className="text-gray-700 mb-6 leading-relaxed">
@@ -35,8 +32,8 @@ export default function About() {
           </p>
 
           {/* Button*/}
-          <div className="flex items-center gap-6 mt-6">
-            <button className="border border-black px-6 py-3 text-black font-medium hover:bg-black hover:text-white transition">
+          <div className="flex items-center md:mt-4">
+            <button className="text-lg border border-black px-8 py-4 font-semibold w-full md:w-fit hover:bg-black hover:text-white transition cursor-pointer">
               About KNMG
             </button>
           </div>

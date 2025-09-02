@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Column 1: What We Do */}
         <div>
-          <h3 className="mb-2 text-lg">What We Do</h3>
+          <h3 className="mb-2 text-lg font-semibold">What We Do</h3>
           <ul className="text-lg space-y-2">
             {navLinks.map((link) => (
               <li key={link.name}>
@@ -41,7 +41,7 @@ const Footer = () => {
 
         {/* Column 2: About */}
         <div>
-          <h3 className="mb-2 text-lg">About</h3>
+          <h3 className="mb-2 text-lg font-semibold">About</h3>
           <ul className="text-lg space-y-2">
             {aboutLinks.map((link) => (
               <li key={link.name}>
@@ -62,7 +62,9 @@ const Footer = () => {
         {/* Column 3: Contact */}
         <div>
           <ul className="text-lg space-y-2">
-            <h3 className="mb-2 text-lg">Contact KNMG Property</h3>
+            <h3 className="mb-2 text-lg font-semibold">
+              Contact KNMG Property
+            </h3>
             <p>(04) 433 0046</p>
             <p>info@knmgproperty.ae</p>
             <p>Office No. 202, Daytona House, Motor City, Dubai, UAE</p>
@@ -71,7 +73,7 @@ const Footer = () => {
 
         {/* Column 4: Social */}
         <div>
-          <h3 className="mb-2 text-lg">Social</h3>
+          <h3 className="mb-2 text-lg font-semibold">Social</h3>
           <div className="flex space-x-4">
             <FaYoutube className="text-5xl bg-white text-black rounded-full p-3" />
             <FaTiktok className="text-5xl bg-white text-black rounded-full p-3" />
@@ -83,7 +85,7 @@ const Footer = () => {
 
       {/* Popular Searches */}
       <div className="mx-auto mt-8 border-t border-b border-gray-700 py-4">
-        <div className="flex items-center text-md">
+        <div className="flex items-center text-lg font-semibold">
           <span>Popular Searches</span>
           <RiArrowDropDownLine className="text-5xl" />
         </div>
