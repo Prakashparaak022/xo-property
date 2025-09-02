@@ -1,6 +1,6 @@
 const HoloIntro = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center px-2 py-6 md:py-10">
+    <div className="flex flex-col md:flex-row justify-between items-center px-2 py-5 md:py-10">
       <div className="md:w-1/2">
         <h1 className="text-3xl md:text-4xl font-semibold md:px-8 mb-4">
           Unlock the best mortgage deals with KNMG Property and Holo.

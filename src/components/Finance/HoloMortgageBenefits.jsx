@@ -2,7 +2,7 @@ import StyledButton from "../Common/StyledButton";
 
 const HoloMortgageBenefits = () => {
   return (
-    <div className="py-6 md:py-10">
+    <div className="py-5 md:py-10">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
         {/* section 1 */}
         <div className="min-h-screen w-full md:w-1/2 bg-black flex items-center justify-center">

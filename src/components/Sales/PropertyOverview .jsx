@@ -2,7 +2,7 @@ import StyledButton from "../Common/StyledButton";
 
 const PropertyOverview = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-start py-6 md:py-10 gap-4">
+    <div className="flex flex-col md:flex-row justify-between items-start py-5 md:py-10 gap-4">
       <div className="md:w-1/2">
         <img
           src="/assets/images/sales/feature-property.webp"
@@ -12,7 +12,7 @@ const PropertyOverview = () => {
       </div>
       <div className="md:w-1/2">
         <div className="space-y-6 px-4 md:px-6">
-          <h2 className="text-3xl font-semibold">
+          <h2 className="text-2xl md:text-4xl font-semibold mb-5">
             Buy or sell with KNMG today.
           </h2>
           <p className="text-lg text-gray-700">

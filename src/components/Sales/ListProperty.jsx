@@ -2,10 +2,10 @@ import StyledButton from "../Common/StyledButton";
 
 const ListProperty = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between items-center py-6 md:py-10 gap-4">
+    <div className="flex flex-col md:flex-row justify-between items-center py-5 md:py-10 gap-4">
       <div className="md:w-1/2">
         <div className="space-y-10 px-4 md:px-6">
-          <h2 className="text-3xl font-semibold">
+          <h2 className="text-2xl md:text-4xl font-semibold mb-5">
             Ready to list your property?
           </h2>
           <p className="text-lg text-gray-700">
