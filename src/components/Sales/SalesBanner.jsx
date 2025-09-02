@@ -10,7 +10,7 @@ export default function SalesBanner() {
 
       <div className="absolute inset-0 bg-black/50"></div>
 
-      <div className="relative z-10 flex flex-col justify-center items-start h-full text-left text-white px-4 md:pl-10 pt-2 md:pt-20">
+      <div className="relative z-10 flex flex-col justify-center items-start h-full text-left text-white px-4 md:pl-15 pt-2 md:pt-30">
         <h1 className="text-3xl md:text-5xl font-semibold mb-4">
           Buy Property in Dubai with Trusted Experts
         </h1>
