@@ -1,21 +1,22 @@
 import Link from "next/link";
+import StyledButton from "../Common/StyledButton";
 
 const ServiceValues = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-4 lg:py-10 bg-white">
       {/* Section 1 */}
       <div className="w-full flex flex-col md:flex-row items-center">
         {/* Left Section - Image */}
-        <div className="md:w-1/2 mb-8 md:mb-0">
+        <div className="md:w-1/2">
           <img
             src="/assets/images/about-us/service-values-1.webp"
             alt="Agency Team"
-            className="w-full h-auto shadow-md"
+            className="w-full h-auto shadow-md max-h-[600px] object-cover object-center"
           />
         </div>
         {/* Right Section - Text Content */}
-        <div className="md:w-1/2 space-y-8 px-8 md:px-16 py-4">
-          <h2 className="text-3xl font-semibold text-black">
+        <div className="md:w-1/2 space-y-8 px-4 py-4 md:px-10">
+          <h2 className="text-2xl md:text-4xl font-semibold mb-5">
             Market leading service, boutique values:
           </h2>
           <p className="text-lg text-gray-700">
@@ -54,9 +55,7 @@ const ServiceValues = () => {
           {/* Contact Button */}
           <div className="mt-8">
             <Link href="/contact">
-              <button className="border-2 border-black text-black px-6 py-3 font-medium w-fit  hover:text-white hover:bg-black transition">
-                Contact Us
-              </button>
+              <StyledButton variant="black-outlined">Contact Us</StyledButton>
             </Link>
           </div>
         </div>
@@ -65,8 +64,8 @@ const ServiceValues = () => {
       {/* Section 2 */}
       <div className="w-full flex flex-col md:flex-row items-center bg-black">
         {/* Left Section - Text Content */}
-        <div className="md:w-1/2 space-y-8 px-8 md:px-16 py-4">
-          <h2 className="text-3xl font-semibold text-white">
+        <div className="md:w-1/2 space-y-8 px-4 py-4 md:px-10">
+          <h2 className="text-2xl md:text-4xl font-semibold mb-5 text-white">
             How do we differentiate ourselves in the market?
           </h2>
           <div className="space-y-4">
@@ -109,13 +108,13 @@ const ServiceValues = () => {
 
           {/* Contact Button */}
           <div className="mt-8">
-            <button className="bg-white border-2 border-white text-black px-6 py-3 font-medium w-fit  hover:text-white hover:bg-black transition">
+            <button className="text-lg px-8 py-4 border border-white font-semibold w-full md:w-fit bg-white cursor-pointer hover:text-white hover:bg-black transition">
               Find out more
             </button>
           </div>
         </div>
         {/* Right Section - Image */}
-        <div className="md:w-1/2 mb-8 md:mb-0">
+        <div className="md:w-1/2">
           <img
             src="/assets/images/about-us/service-values-2.webp"
             alt="Agency Team"

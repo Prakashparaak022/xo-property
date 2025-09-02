@@ -1,12 +1,12 @@
 const AboutKNMG = () => {
   return (
-    <div className="w-full flex flex-col md:flex-row items-center py-4 md:py-8">
+    <div className="w-full flex flex-col md:flex-row items-center py-4 md:py-10">
       {/* Left Section - Image */}
-      <div className="min-h-[400px] w-full md:w-1/2 bg-white flex items-center justify-center">
-        <span className="text-black text-9xl md:text-10xl font-bold">KNMG</span>
+      <div className="w-full md:w-1/2 flex flex-col items-center justify-center min-h-[300px]">
+        <span className="text-6xl md:text-9xl font-bold">KNMG</span>
       </div>
       {/* Right Section - Text Content */}
-      <div className="md:w-1/2 space-y-8 p-8 md:p-16">
+      <div className="md:w-1/2 space-y-8 px-4 md:px-10">
         <h2 className="text-3xl font-semibold text-black">
           KNMG: The Meaning Behind the Name
         </h2>
