@@ -2,18 +2,24 @@ import StyledButton from "../Common/StyledButton";
 
 const HoloMortgageBenefits = () => {
   return (
-    <div>
-      <div className="py-4 md:py-10">
+    <div className="py-4 md:py-10">
+      <div>
         <div className="flex flex-col md:flex-row justify-between items-stretch gap-4 md:gap-0">
           {/* section 1 */}
-          <div className="w-full md:w-1/2 bg-black flex items-center justify-center min-h-[300px]">
+          <div className="w-full md:w-1/2 bg-black flex flex-col items-center justify-center min-h-[300px]">
             <span className="text-white text-6xl md:text-8xl font-bold">
               KNMG
+            </span>
+            <span className="text-white text-4xl md:text-6xl font-semibold mt-4">
+              x
+            </span>
+            <span className="text-white text-6xl md:text-8xl font-bold mt-2">
+              Holo
             </span>
           </div>
 
           {/* section 2 */}
-          <div className="md:w-1/2 px-4 md:px-10 flex items-center">
+          <div className="md:w-1/2 p-4 md:p-10 flex items-center">
             <div className="space-y-6">
               <h2 className="text-2xl md:text-4xl font-semibold mb-5">
                 Why choose KNMG Property and Holo?
@@ -61,7 +67,7 @@ const HoloMortgageBenefits = () => {
         </div>
       </div>
       {/* section 2 */}
-      <div className="py-4 md:py-10">
+      <div>
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
           <div className="md:w-1/2 px-4 md:px-10">
             <div className="space-y-6">
