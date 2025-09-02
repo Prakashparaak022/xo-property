@@ -28,7 +28,7 @@ export default function DubaiInspiration() {
         {/* Right section - image */}
         <div className="w-full md:w-1/2 h-64 md:h-full">
           <img
-            src="/assets/images/dubai-inspiration.webp"
+            src="/assets/images/home/dubai-inspiration.webp"
             alt="Dubai landscape"
             className="object-cover w-full h-full"
           />

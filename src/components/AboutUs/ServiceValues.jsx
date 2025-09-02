@@ -116,9 +116,9 @@ const ServiceValues = () => {
         {/* Right Section - Image */}
         <div className="md:w-1/2">
           <img
-            src="/assets/images/about-us/service-values-2.webp"
+            src="/assets/images/about-us/about-us-property.webp"
             alt="Agency Team"
-            className="w-full h-auto shadow-md"
+            className="w-full h-full shadow-md"
           />
         </div>
       </div>

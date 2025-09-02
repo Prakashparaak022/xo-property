@@ -6,7 +6,7 @@ export default function AboutBanner() {
     <section className="relative w-full h-screen overflow-hidden">
       <img
         className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/assets/images/about-us.webp"
+        src="/assets/images/about-us/about-us-banner.webp"
       />
 
       <div className="absolute inset-0 bg-black/50"></div>

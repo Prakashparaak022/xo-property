@@ -5,7 +5,7 @@ export default function About() {
         {/* Left Image */}
         <div className="md:w-1/2">
           <img
-            src="/assets/images/about.webp"
+            src="/assets/images/home/about.webp"
             alt="Property Overview"
             className="w-full md:max-h-[600px] object-cover"
           />

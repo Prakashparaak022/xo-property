@@ -4,21 +4,21 @@ import Link from "next/link";
 const properties = [
   {
     id: 1,
-    image: "/assets/images/featured-properties/villa.webp",
+    image: "/assets/images/featured-properties/property-1.webp",
     price: "AED 390,000",
     location: "Lila, Arabian Ranches 2, Dubai",
     description: "5 Bedroom Villa to rent",
   },
   {
     id: 2,
-    image: "/assets/images/featured-properties/marina.webp",
+    image: "/assets/images/featured-properties/property-2.webp",
     price: "AED 2,000,000",
     location: "Marina Gate 1, Marina Gate, Dubai Marina, Dubai",
     description: "1 Bedroom Apartment for sale",
   },
   {
     id: 3,
-    image: "/assets/images/featured-properties/downtown.webp",
+    image: "/assets/images/featured-properties/property-3.webp",
     price: "AED 160,000",
     location: "Mon Reve, Downtown Dubai, Dubai",
     description: "2 Bedroom Apartment to rent",
