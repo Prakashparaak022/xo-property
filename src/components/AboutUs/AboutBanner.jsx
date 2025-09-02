@@ -16,7 +16,7 @@ export default function AboutBanner() {
           The KNMG Property Story
         </h1>
         <p className="text-base md:text-xl mb-8">Get to know us.</p>
-        <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+        <div className="w-full flex flex-col md:flex-row gap-4 md:gap-6">
           <StyledButton>List Your Property</StyledButton>
           <Link href="/contact">
             <StyledButton variant="white-outlined">Contact us</StyledButton>

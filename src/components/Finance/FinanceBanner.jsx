@@ -18,7 +18,7 @@ export default function FinanceBanner() {
         <p className="text-base md:text-xl mb-8">
           Comprehensive mortgage options with KNMG Property and Holo.
         </p>
-        <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+        <div className="w-full flex flex-col md:flex-row gap-4 md:gap-6">
           <StyledButton>Explore mortgage options</StyledButton>
           <Link href="/contact">
             <StyledButton variant="white-outlined">Contact us</StyledButton>

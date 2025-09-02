@@ -19,7 +19,7 @@ export default function SalesBanner() {
           waterfront apartments to spacious villas, our brokers will guide you
           through every step of the buying process.
         </p>
-        <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+        <div className="w-full flex flex-col md:flex-row gap-4 md:gap-6">
           <StyledButton>Properties for Sale</StyledButton>
           <StyledButton variant="white-outlined">
             List your property
