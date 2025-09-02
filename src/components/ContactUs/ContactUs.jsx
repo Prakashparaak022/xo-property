@@ -1,34 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
+import StyledButton from "../Common/StyledButton";
 
 const ContactUs = () => {
   return (
-    <div className="w-full flex flex-col md:flex-row items-center py-8 md:py-16">
+    <div className="flex flex-col md:flex-row justify-between items-center p-4 md:p-10 gap-4 md:gap-8">
       {/* Left Section - Image */}
       <div className="md:w-1/2">
-        <div className="max-w-4xl px-8 md:px-16 pt-16">
-          <h1 className="text-4xl font-semibold text-gray-900">Contact us</h1>
-          <p className="mt-4 text-lg text-gray-600">
-            We’d love to hear from you! Whether you have a question about our
-            services, want to learn more about the dynamic Dubai real estate
-            market, or simply want to get to know us better, the team at KNMG
-            Property is here to assist.
-          </p>
-          <p className="mt-4 text-lg text-gray-600">
-            Fill out the form below, and one of our friendly experts will reach
-            out to you shortly. We’re excited to connect with you and help you
-            with all your real estate needs.
-          </p>
-          <p className="mt-4 text-lg text-gray-600">
-            Let’s start a conversation!
-          </p>
-          <div className="mt-8">
-            <Link
-              href="/enquiry"
-              className="inline-block px-10 py-3 border-2 border-black text-lg font-medium hover:bg-black hover:text-white">
-              Get in touch
-            </Link>
-          </div>
+        <h1 className="text-2xl md:text-4xl font-semibold mb-5">Contact us</h1>
+        <p className="mt-4 text-lg text-gray-600">
+          We’d love to hear from you! Whether you have a question about our
+          services, want to learn more about the dynamic Dubai real estate
+          market, or simply want to get to know us better, the team at KNMG
+          Property is here to assist.
+        </p>
+        <p className="mt-4 text-lg text-gray-600">
+          Fill out the form below, and one of our friendly experts will reach
+          out to you shortly. We’re excited to connect with you and help you
+          with all your real estate needs.
+        </p>
+        <p className="mt-4 text-lg text-gray-600">
+          Let’s start a conversation!
+        </p>
+        <div className="mt-8">
+          <Link href="/enquiry">
+            <StyledButton variant="black-outlined">Get in touch</StyledButton>
+          </Link>
         </div>
       </div>
       {/* Right Section - Text Content */}

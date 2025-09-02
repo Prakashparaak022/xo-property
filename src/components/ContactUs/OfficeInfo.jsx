@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const OfficeInfo = () => {
   return (
-    <div className="max-w-4xl px-8 md:px-16 py-8">
+    <div className="max-w-4xl py-5 py-10 px-8 md:px-16">
       <div className="bg-white">
         <div className="rounded-lg overflow-hidden">
           <Image
