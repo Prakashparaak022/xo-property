@@ -1,13 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --background-hover: #4f3625;
+  --background: #003f3a;
+  --text-highlight: #003f3a;
 }
 
 .bg-default {
-  background: #4f3625;
+  background: #003f3a;
 }
 
 .hover-bg:hover {
-  background: #4f3625;
+  background: #003f3a;
 }
+
+.footer-bg {
+  background: #002e2a;
+}
+
+/* dark green 003f3a*/
+/* logo green 00594f*/
+
+/* version 1 003f3a */
+/* version 2 595300 */
