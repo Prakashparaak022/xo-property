@@ -21,7 +21,7 @@ export default function Mission() {
     },
   ];
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-start p-5 lg:p-10 gap-4">
+    <div className="flex flex-col lg:flex-row justify-between items-start p-5 lg:p-10 gap-4 md:gap-10">
       {/* Left Column */}
       <Animate>
         <div className="lg:w-[70%]">
@@ -47,12 +47,12 @@ export default function Mission() {
             {exploreList.map((item, index) => (
               <Animate key={index}>
                 <li key={index} className="flex items-center">
-                  <div className="bg-gray-200 rounded-full p-3 mr-3 flex items-center justify-center">
-                    <item.icon className="text-[#453932] text-xl md:text-2xl" />
+                  <div className="bg-default rounded-full p-3 mr-3 flex items-center justify-center">
+                    <item.icon className="text-gray-200 text-xl" />
                   </div>
                   <a
                     href="#"
-                    className="underline text-gray-700 text-lg pb-1 border-b-2 border-transparent hover:border-gray-700 inline-block transition">
+                    className="text-gray-700 text-lg underline">
                     {item.title}
                   </a>
                 </li>

@@ -84,7 +84,7 @@ const Footer = () => {
       </div>
 
       {/* Popular Searches */}
-      <div className="mx-auto mt-8 border-t border-b border-gray-700 py-4">
+      <div className="mx-auto mt-8 border-t border-b border-gray-300 py-4">
         <div className="flex items-center text-lg font-semibold">
           <span>Popular Searches</span>
           <RiArrowDropDownLine className="text-5xl" />
