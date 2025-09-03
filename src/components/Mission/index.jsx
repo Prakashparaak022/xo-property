@@ -36,14 +36,16 @@ export default function Mission() {
 
       {/* Right Column */}
 
-      <Animate>
-        <div className="lg:w-[30%] flex justify-center items-start">
-          <div className="w-full">
+      <div className="lg:w-[30%] flex justify-center items-start">
+        <div className="w-full">
+          <Animate>
             <h2 className="font-semibold text-2xl md:text-4xl mb-4">
               Explore KNMG Property
             </h2>
-            <ul className="space-y-4 md:p-2">
-              {exploreList.map((item, index) => (
+          </Animate>
+          <ul className="space-y-4 md:p-2">
+            {exploreList.map((item, index) => (
+              <Animate key={index}>
                 <li key={index} className="flex items-center">
                   <div className="bg-gray-200 rounded-full p-3 mr-3 flex items-center justify-center">
                     <item.icon className="text-[#453932] text-xl md:text-2xl" />
@@ -54,11 +56,11 @@ export default function Mission() {
                     {item.title}
                   </a>
                 </li>
-              ))}
-            </ul>
-          </div>
+              </Animate>
+            ))}
+          </ul>
         </div>
-      </Animate>
+      </div>
     </div>
   );
 }
