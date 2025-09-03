@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Animate from "../Common/Animate";
 
 const FAQ = () => {
   const [open, setOpen] = useState(null);
@@ -30,20 +31,24 @@ const FAQ = () => {
   return (
     <div className="mt-4 p-4 md:p-10">
       <div className="border-b border-gray-200 pb-4">
-        <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+        <Animate>
+          <h2 className="text-xl font-semibold">Frequently asked questions</h2>
+        </Animate>
       </div>
       <div className="mt-4 space-y-4">
         {faqs.map((faq, index) => (
-          <div key={index} className="border-b border-gray-200 pb-4">
-            <button
-              onClick={() => setOpen(open === index ? null : index)}
-              className="w-full text-left text-lg font-medium">
-              {faq.question}
-            </button>
-            {open === index && (
-              <p className="mt-2 text-gray-600">{faq.answer}</p>
-            )}
-          </div>
+          <Animate key={index}>
+            <div key={index} className="border-b border-gray-200 pb-4">
+              <button
+                onClick={() => setOpen(open === index ? null : index)}
+                className="w-full text-left text-lg font-medium">
+                {faq.question}
+              </button>
+              {open === index && (
+                <p className="mt-2 text-gray-600">{faq.answer}</p>
+              )}
+            </div>
+          </Animate>
         ))}
       </div>
     </div>
