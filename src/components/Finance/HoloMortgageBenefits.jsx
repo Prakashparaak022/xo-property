@@ -8,7 +8,7 @@ const HoloMortgageBenefits = () => {
         <div className="flex flex-col md:flex-row justify-between items-stretch gap-4 md:gap-0">
           {/* section 1 */}
           <Animate>
-            <div className="w-full md:w-1/2 bg-black flex flex-col items-center justify-center min-h-[300px]">
+            <div className="w-full md:w-1/2 bg-default flex flex-col items-center justify-center min-h-[300px]">
               <span className="text-white text-6xl md:text-8xl font-bold">
                 KNMG
               </span>

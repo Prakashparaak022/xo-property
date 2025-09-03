@@ -21,7 +21,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black text-white py-8 px-4 md:px-4 lg:px-8 relative">
+    <footer className="bg-default text-white py-8 px-4 md:px-4 lg:px-8 relative">
       <div className="mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Column 1: What We Do */}
         <div>

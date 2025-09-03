@@ -74,7 +74,7 @@ const ServiceValues = () => {
       </div>
 
       {/* Section 2 */}
-      <div className="w-full flex flex-col md:flex-row items-center bg-black">
+      <div className="w-full flex flex-col md:flex-row items-center bg-default">
         {/* Left Section - Text Content */}
         <div className="md:w-1/2 space-y-8 px-4 py-4 md:px-10">
           <Animate>
@@ -130,7 +130,7 @@ const ServiceValues = () => {
           {/* Contact Button */}
           <Animate>
             <div className="mt-8">
-              <button className="text-lg px-8 py-4 border border-white font-semibold w-full md:w-fit bg-white cursor-pointer hover:text-white hover:bg-black transition">
+              <button className="text-lg px-8 py-4 border border-white font-semibold w-full md:w-fit bg-white cursor-pointer hover:text-white hover-bg transition">
                 Find out more
               </button>
             </div>

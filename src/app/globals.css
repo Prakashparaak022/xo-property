@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+:root {
+  --background-hover: #4f3625;
+}
+
+.bg-default {
+  background: #4f3625;
+}
+
+.hover-bg:hover {
+  background: #4f3625;
+}

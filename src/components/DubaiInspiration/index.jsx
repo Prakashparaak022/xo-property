@@ -5,7 +5,7 @@ export default function DubaiInspiration() {
     <section className="py-5 md:py-10">
       <div className="flex flex-col md:flex-row">
         {/* Left section - text */}
-        <div className="bg-black text-white flex flex-col justify-center px-6 md:px-16 py-10 md:py-16 md:w-1/2">
+        <div className="bg-default text-white flex flex-col justify-center px-6 md:px-16 py-10 md:py-16 md:w-1/2">
           <Animate>
             <h2 className="text-2xl md:text-4xl font-semibold mb-5">
               Looking for inspiration?
@@ -27,7 +27,7 @@ export default function DubaiInspiration() {
             </p>
           </Animate>{" "}
           <Animate>
-            <button className="text-lg border border-white bg-white text-black px-8 py-4 font-semibold w-full md:w-fit hover:bg-black hover:text-white transition cursor-pointer">
+            <button className="text-lg border border-white bg-white text-black px-8 py-4 font-semibold w-full md:w-fit hover-bg hover:text-white transition cursor-pointer">
               Explore now
             </button>
           </Animate>

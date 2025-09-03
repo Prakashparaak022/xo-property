@@ -1,20 +1,21 @@
 const StyledButton = ({ variant = "white-filled", children }) => {
-  const baseClasses = "text-lg px-8 py-4 font-semibold w-full md:w-fit transition cursor-pointer";
+  const baseClasses =
+    "text-lg px-8 py-4 font-semibold w-full md:w-fit transition cursor-pointer";
   let buttonClasses = "";
 
   switch (variant) {
     case "white-filled":
-      buttonClasses = `bg-white text-black hover:bg-black hover:text-white ${baseClasses}`;
+      buttonClasses = `bg-white text-black hover-bg hover:text-white ${baseClasses}`;
       break;
     case "black-filled":
-      buttonClasses = `bg-black text-white hover:bg-white hover:text-black ${baseClasses}`;
+      buttonClasses = `bg-default text-white hover:bg-white hover:text-black ${baseClasses}`;
       break;
     case "white-outlined":
-      buttonClasses = `border border-white text-white hover:bg-black hover:border-black hover:text-white ${baseClasses}`;
+      buttonClasses = `border border-white text-white hover-bg hover:border-black hover:text-white ${baseClasses}`;
       break;
     case "black-outlined":
     default:
-      buttonClasses = `border border-black text-black hover:bg-black hover:text-white ${baseClasses}`;
+      buttonClasses = `border border-black text-black hover-bg hover:text-white ${baseClasses}`;
       break;
   }
 

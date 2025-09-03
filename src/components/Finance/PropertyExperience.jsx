@@ -5,7 +5,7 @@ export default function PropertyExperience() {
   return (
     <div className="flex flex-col md:flex-row">
       {/* Left section - text */}
-      <div className="bg-black text-white flex flex-col justify-center p-4 md:p-10 w-full md:w-1/2">
+      <div className="bg-default text-white flex flex-col justify-center p-4 md:p-10 w-full md:w-1/2">
         {/* section 1 */}
         <Animate>
           <h2 className="text-2xl md:text-4xl font-semibold mb-5">

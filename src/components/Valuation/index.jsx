@@ -23,7 +23,7 @@ export default function Valuation() {
             </p>
           </Animate>
           <Animate>
-            <button className="text-lg border border-black px-8 py-4 font-semibold w-full md:w-fit hover:bg-black hover:text-white transition cursor-pointer">
+            <button className="text-lg border border-black px-8 py-4 font-semibold w-full md:w-fit hover-bg hover:text-white transition cursor-pointer">
               Free valuation
             </button>
           </Animate>

@@ -40,7 +40,7 @@ export default function About() {
           <Animate>
             {/* Button*/}
             <div className="flex items-center md:mt-4">
-              <button className="text-lg border border-black px-8 py-4 font-semibold w-full md:w-fit hover:bg-black hover:text-white transition cursor-pointer">
+              <button className="text-lg border border-black px-8 py-4 font-semibold w-full md:w-fit hover-bg hover:text-white transition cursor-pointer">
                 About KNMG
               </button>
             </div>

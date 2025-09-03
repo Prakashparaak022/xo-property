@@ -9,7 +9,7 @@ export default function Hero() {
         muted
         playsInline
       />
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-default/50"></div>
       <div className="relative z-10 flex flex-col justify-center items-start h-full text-left text-white px-4 md:pl-10 pt-2 md:pt-20">
         <h1 className="text-3xl md:text-5xl font-semibold mb-4">
           Luxury Property Brokers in Dubai
@@ -38,7 +38,7 @@ export default function Hero() {
           <select className="border-[0.5px] border-gray-400 px-3 py-2 w-full md:w-auto md:mr-2">
             <option>All Types</option>
           </select>
-          <button className="border border-black text-black px-6 py-2 w-full md:w-auto font-semibold hover:bg-black hover:text-white transition">
+          <button className="border border-black text-black px-6 py-2 w-full md:w-auto font-semibold hover-bg hover:text-white transition">
             Search
           </button>
         </div>
