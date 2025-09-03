@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import "@/assets/css/fontawesome.min.css";
 import "@/assets/css/loader.css";
 import "@/assets/css/animations.css";
 
