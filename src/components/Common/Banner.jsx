@@ -19,6 +19,7 @@ const Banner = ({
         layout="fill"
         objectFit="cover"
         priority
+        loading="eager"
       />
 
       <div className="absolute inset-0 bg-default/50"></div>
