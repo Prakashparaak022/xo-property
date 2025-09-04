@@ -3,7 +3,7 @@ import Banner from "../Common/Banner";
 export default function FinanceBanner() {
   return (
     <Banner
-      banner={"/assets/images/finance/finance-banner.webp"}
+      banner={"/assets/images/finance/finance-banner.jpg"}
       title={"Financing your property in Dubai"}
       subtitle={"Comprehensive mortgage options with KNMG Property and Holo."}
       primaryButton={{ title: "Explore mortgage options", link: "" }}

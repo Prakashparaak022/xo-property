@@ -44,7 +44,7 @@ const ContactUs = () => {
       {/* Right Section - Text Content */}
       <div className="md:w-1/2">
         <Image
-          src={"/assets/images/contact-us/office.webp"}
+          src={"/assets/images/contact-us/office.jpg"}
           alt="KNMG Property Office Building"
           className="rounded-lg"
           width={1200}

@@ -3,7 +3,7 @@ import Banner from "../Common/Banner";
 export default function OffPlanBanner() {
   return (
     <Banner
-      banner={"/assets/images/offplan/offplan-banner.webp"}
+      banner={"/assets/images/offplan/offplan-banner.jpg"}
       title={"Invest in Dubai’s Off-Plan Developments."}
       subtitle={`We provide access to Dubai’s leading off-plan developments, offering
             exclusive projects, flexible payment plans and expert, market-led

@@ -106,7 +106,7 @@ const HoloMortgageBenefits = () => {
           </div>
           <div className="md:w-1/2">
             <img
-              src="/assets/images/finance/explore.webp"
+              src="/assets/images/finance/explore.jpg"
               alt="Property Overview"
               className="w-full md:max-h-[500px] object-cover"
             />

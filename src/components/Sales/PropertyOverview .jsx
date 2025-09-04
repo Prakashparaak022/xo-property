@@ -6,7 +6,7 @@ const PropertyOverview = () => {
     <div className="flex flex-col md:flex-row justify-between items-start py-5 md:py-10 gap-4">
       <div className="md:w-1/2">
         <img
-          src="/assets/images/sales/feature-property.webp"
+          src="/assets/images/sales/feature-property.jpg"
           alt="Property Overview"
           className="w-full max-h-[500px] object-cover"
         />

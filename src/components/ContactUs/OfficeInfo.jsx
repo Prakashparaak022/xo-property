@@ -6,7 +6,7 @@ const OfficeInfo = () => {
       <div className="bg-white">
         <div className="rounded-lg overflow-hidden">
           <Image
-            src={"/assets/images/contact-us/office.webp"}
+            src={"/assets/images/contact-us/office.jpg"}
             alt="KNMG Property Office Building"
             className="rounded-lg"
             width={1200}

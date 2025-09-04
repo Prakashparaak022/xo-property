@@ -10,7 +10,7 @@ const ServiceValues = () => {
         {/* Left Section - Image */}
         <div className="md:w-1/2">
           <img
-            src="/assets/images/about-us/service-values-1.webp"
+            src="/assets/images/about-us/service-values-1.jpg"
             alt="Agency Team"
             className="w-full h-auto shadow-md max-h-[600px] object-cover object-center"
           />
@@ -139,7 +139,7 @@ const ServiceValues = () => {
         {/* Right Section - Image */}
         <div className="md:w-1/2">
           <img
-            src="/assets/images/about-us/about-us-property.webp"
+            src="/assets/images/about-us/about-us-property.jpg"
             alt="Agency Team"
             className="w-full h-full shadow-md"
           />

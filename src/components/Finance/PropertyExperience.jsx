@@ -28,7 +28,7 @@ export default function PropertyExperience() {
       {/* Right section - image */}
       <div className="w-full md:w-1/2 h-64 md:h-full">
         <img
-          src="/assets/images/finance/find-out.webp"
+          src="/assets/images/finance/find-out.jpg"
           alt="Dubai landscape"
           className="object-cover w-full h-full"
         />

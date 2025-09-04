@@ -32,7 +32,7 @@ export default function Valuation() {
         {/* Right: Image */}
         <div className="w-full md:w-1/2 h-64 md:h-full">
           <img
-            src="/assets/images/home/sell-property.webp"
+            src="/assets/images/home/sell-property.jpg"
             alt="Real estate professionals"
             className="object-cover object-center w-full h-full md:max-h-[600px]"
           />

@@ -31,7 +31,7 @@ const ListProperty = () => {
       </div>
       <div className="md:w-1/2">
         <img
-          src="/assets/images/sales/list-property.webp"
+          src="/assets/images/sales/list-property.jpg"
           alt="Property Overview"
           className="w-full max-h-[600px] object-cover"
         />
