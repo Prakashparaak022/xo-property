@@ -11,7 +11,7 @@ const Banner = ({
   secondaryButton,
 }) => {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden bg-default">
       <Image
         className="absolute top-0 left-0 w-full h-full object-cover"
         src={banner}
