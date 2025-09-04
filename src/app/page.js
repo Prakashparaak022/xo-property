@@ -10,7 +10,7 @@ import LayoutStyle1 from "@/layouts/LayoutStyle1";
 export default function Home() {
   return (
     <LayoutStyle1>
-      <Hero />
+      {/* <Hero /> */}
       <Mission />
       <Stats />
       <About />
