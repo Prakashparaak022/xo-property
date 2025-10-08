@@ -21,7 +21,9 @@ export default function PropertyExperience() {
           </p>
         </Animate>
         <Animate>
-          <StyledButton variant="white-filled">Find out more</StyledButton>
+          <button className="text-lg border border-white bg-white text-black px-8 py-4 font-semibold w-full md:w-fit hover-bg hover:text-white transition cursor-pointer">
+            Find out more
+          </button>
         </Animate>
       </div>
 
