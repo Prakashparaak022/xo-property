@@ -2,10 +2,11 @@ import { FaBook, FaBriefcase, FaSearch } from "react-icons/fa";
 import Animate from "../Common/Animate";
 
 export default function Mission() {
-  const title =
-    "Our mission at KNMG is to empower you. Selecting the right property is one of the most important decisions you'll ever make.";
-  const content1 = `As one of the leading real estate companies in Dubai, our mission extends beyond simply selling or renting properties; we strive to equip you with the knowledge, insights, market data, and confidence necessary to make informed decisions that align with your aspirations.`;
-  const content2 = `Finding reliable real estate agents in Dubai can be overwhelming due to the abundance of choices. At KNMG, we prioritize transparency and clarity, guiding you through every step of the process. Whether you're buying, selling, renting, or managing property, our team of highly skilled real estate brokers is here to ensure that your experience is seamless and stress-free.`;
+  const title = "At KNMG, your property journey is our passion.";
+  const subTitle =
+    "Finding the right home or investment isn’t just a transaction—it’s about shaping your future, lifestyle, and peace of mind.";
+  const content1 = `Dubai’s real estate market offers endless opportunities, and at KNMG Properties, we’re here to simplify the journey. We listen, understand, and guide you toward the home or investment that truly matches your needs.`;
+  const content2 = `From your first apartment to a luxury villa or off-plan project, we go beyond listings with insights and market expertise. Our goal is to make every step smooth, stress-free, and rewarding—because we’re more than agents, we’re your partners in property.`;
   const exploreList = [
     {
       icon: FaSearch,
@@ -25,7 +26,10 @@ export default function Mission() {
       {/* Left Column */}
       <Animate>
         <div className="lg:w-[70%]">
-          <h1 className="text-2xl md:text-4xl font-semibold mb-5">{title}</h1>
+          <h1 className="text-2xl md:text-4xl font-semibold mb-1">{title}</h1>
+          <h1 className="text-xl md:text-3xl mb-5">
+            {subTitle}
+          </h1>
           <p className="text-lg mb-4 text-gray-800">{content1}</p>
           <p className="text-lg mb-6 text-gray-800">{content2}</p>
           <button className="text-lg border border-black px-8 py-4 font-semibold w-full md:w-fit hover-bg hover:text-white transition cursor-pointer">
@@ -50,9 +54,7 @@ export default function Mission() {
                   <div className="bg-default rounded-full p-3 mr-3 flex items-center justify-center">
                     <item.icon className="text-gray-200 text-xl" />
                   </div>
-                  <a
-                    href="#"
-                    className="text-gray-700 text-lg underline">
+                  <a href="#" className="text-gray-700 text-lg underline">
                     {item.title}
                   </a>
                 </li>
