@@ -2,6 +2,17 @@ import Animate from "../Common/Animate";
 import StyledButton from "../Common/StyledButton";
 
 const PropertyOverview = () => {
+  const title = "Why Choose KNMG";
+  const content1 = "Smarter decisions, smoother journeys.";
+  const content2 =
+    "From family homes to investment portfolios, we provide the insights and tools you need to buy or sell with confidence.";
+  const content3 =
+    "Our expert team covers Dubai’s most in-demand areas, offering tailored advice whether you’re searching for a beachfront villa or a luxury apartment in the heart of the city.";
+  const listTitle1 =
+    "Looking for financing? Our mortgage partners offer competitive solutions.";
+  const listTitle2 =
+    "Need legal guidance? Our conveyancing network ensures a seamless transfer.";
+
   return (
     <div className="flex flex-col md:flex-row justify-between items-start py-5 md:py-10 gap-4">
       <div className="md:w-1/2">
@@ -14,37 +25,27 @@ const PropertyOverview = () => {
       <div className="md:w-1/2">
         <div className="space-y-6 px-4 md:px-6">
           <Animate>
-            <h2 className="text-2xl md:text-4xl font-semibold mb-5">
-              Buy or sell with KNMG today.
-            </h2>
+            <h2 className="text-2xl md:text-4xl font-semibold mb-5">{title}</h2>
+          </Animate>
+          <Animate>
+            <div>
+              <p className="text-lg text-gray-700">
+                <span className="font-bold">{content1}{" "}</span>
+                {content2}
+              </p>
+            </div>
+          </Animate>
+          <Animate>
+            <p className="text-lg text-gray-700">{content3}</p>
           </Animate>
           <Animate>
             <p className="text-lg text-gray-700">
-              Whether you're looking to buy a home for your family, investing in
-              a property, or looking to maximise your sale price, we provide the
-              right information at the right time, ensuring you're equipped to
-              make the best choice.
-            </p>
-          </Animate>{" "}
-          <Animate>
-            <p className="text-lg text-gray-700">
-              Our team of specialists—covering all prime areas in Dubai
-              including Palm Jumeirah, Jumeirah Islands, Dubai Hills, Emirates
-              Hills, Damac Hills, Tilal al Ghaf and many more—offer deep market
-              insights, whether you're searching for a luxury villa or an
-              apartment in an exclusive location.
+              {listTitle1}
             </p>
           </Animate>
           <Animate>
             <p className="text-lg text-gray-700">
-              Want to finance your purchase?{" "}
-              <a>Learn more about mortgage options.</a>
-            </p>
-          </Animate>
-          <Animate>
-            <p className="text-lg text-gray-700">
-              Need legal support?{" "}
-              <a>Our conveyancing partners are here to help.</a>
+              {listTitle2}
             </p>
           </Animate>
           <Animate>

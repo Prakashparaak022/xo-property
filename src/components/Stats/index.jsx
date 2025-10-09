@@ -2,10 +2,13 @@ import Animate from "../Common/Animate";
 
 export default function Stats() {
   const stats = [
-    { value: "AED 530M+", label: "Worth of transactions in 2024" },
-    { value: "4.8", label: "Star rated google reviews" },
-    { value: "40+", label: "Specialists available across Dubai" },
-    { value: "200+", label: "Sales in 2024" },
+    {
+      value: "AED 530M+",
+      label: "Value of properties successfully transacted in 2024",
+    },
+    { value: "4.8★", label: "Average Google rating from satisfied clients" },
+    { value: "40+", label: "Local experts dedicated to Dubai real estate" },
+    { value: "200+", label: "Successful transactions completed in 2024" },
   ];
 
   return (

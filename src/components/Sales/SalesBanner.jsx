@@ -4,10 +4,8 @@ export default function SalesBanner() {
   return (
     <Banner
       banner={"/assets/images/sales/sales-banner.jpg"}
-      title={"Buy Property in Dubai with Trusted Experts"}
-      subtitle={`Find your next home or investment in Dubai with KNMG Property. From
-            waterfront apartments to spacious villas, our brokers will guide you
-            through every step of the buying process.`}
+      title={"Invest in Dubai Real Estate with Confidence"}
+      subtitle={`Find your dream property with KNMG Property. From stunning waterfront residences to contemporary villas, our experienced advisors make the process of buying in Dubai simple, transparent, and rewarding.`}
       primaryButton={{ title: "Properties for Sale", link: "" }}
       secondaryButton={{ title: "List your property", link: "" }}
     />

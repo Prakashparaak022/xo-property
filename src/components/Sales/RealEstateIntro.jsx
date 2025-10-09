@@ -7,8 +7,7 @@ const RealEstateIntro = () => {
         <div className="lg:w-1/2 lg:px-10 ">
           <Animate>
             <h1 className="text-2xl md:text-4xl font-semibold mb-5">
-              Buying or selling, KNMG are your trusted real estate brokerage in
-              Dubai.
+              Exclusive Listings | Sell with KNMG
             </h1>
           </Animate>
         </div>
@@ -16,18 +15,20 @@ const RealEstateIntro = () => {
         <div className="lg:w-1/2 lg:px-10">
           <Animate>
             <p className="text-lg text-gray-700 mb-2 lg:mb-4">
-              Whether buying, investing or preparing to sell, we offer the
-              insight and support needed to make confident, informed decisions.
+              At KNMG, we bring clarity and confidence to your property journey.
+              Whether you’re purchasing, investing, or preparing to sell, we
+              combine market expertise with a boutique level of service to
+              deliver results you can trust.
             </p>
           </Animate>
 
           <Animate>
             <p className="text-lg text-gray-700">
-              Our team covers prime areas across Dubai, including Palm Jumeirah,
-              Jumeirah Islands, Dubai Hills, Emirates Hills, Damac Hills, Tilal
-              Al Ghaf and more. With deep market knowledge and a tailored
-              approach, we help you navigate every step, from luxury villas to
-              high-end apartments in the city’s most exclusive communities.
+              Our specialists cover Dubai’s most prestigious communities,
+              including Palm Jumeirah, Jumeirah Islands, Dubai Hills, Emirates
+              Hills, Damac Hills, Tilal Al Ghaf, and beyond. With in-depth
+              knowledge and a personalised approach, we guide you from first
+              viewing to final handover.
             </p>
           </Animate>
         </div>

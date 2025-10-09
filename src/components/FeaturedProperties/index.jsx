@@ -8,23 +8,28 @@ const properties = [
     image: "/assets/images/featured-properties/property-1.jpg",
     price: "AED 390,000",
     location: "Lila, Arabian Ranches 2, Dubai",
-    description: "5 Bedroom Villa to rent",
+    description: "5-Bedroom Villa for Rent",
   },
   {
     id: 2,
     image: "/assets/images/featured-properties/property-2.jpg",
     price: "AED 2,000,000",
-    location: "Marina Gate 1, Marina Gate, Dubai Marina, Dubai",
-    description: "1 Bedroom Apartment for sale",
+    location: "Marina Gate 1, Dubai Marina",
+    description: "1-Bedroom Apartment for Sale",
   },
   {
     id: 3,
     image: "/assets/images/featured-properties/property-3.jpg",
     price: "AED 160,000",
-    location: "Mon Reve, Downtown Dubai, Dubai",
-    description: "2 Bedroom Apartment to rent",
+    location: "Mon Reve, Downtown Dubai",
+    description: "2-Bedroom Apartment for Rent",
   },
 ];
+
+const title = "Available Properties";
+const subTitle1 = "Explore handpicked homes and investments.";
+const subTitle2 =
+  "Have a specific requirement? Share your wishlist with us, and we’ll find the perfect match.";
 
 export default function FeaturedProperties() {
   return (
@@ -32,17 +37,11 @@ export default function FeaturedProperties() {
       {/* Heading */}
       <div className="text-center mb-6">
         <Animate>
-          <h2 className="text-2xl md:text-4xl font-semibold mb-5">
-            Featured Properties
-          </h2>
+          <h2 className="text-2xl md:text-4xl font-semibold mb-5">{title}</h2>
         </Animate>
         <Animate>
           <p className="text-gray-600 text-md mt-2 md:mt-4">
-            <span className="font-bold">Have a specific request? </span>
-            <Link href="/enquiry" className="underline">
-              Get in touch
-            </Link>{" "}
-            and we will help you.
+            <span className="font-bold">{subTitle1} </span>
           </p>
         </Animate>
       </div>
@@ -74,6 +73,12 @@ export default function FeaturedProperties() {
           </Animate>
         ))}
       </div>
+
+      <Animate>
+        <p className="text-center text-gray-800 text-md mt-5 md:mt-10">
+          {subTitle2}
+        </p>
+      </Animate>
     </section>
   );
 }
