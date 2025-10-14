@@ -1,6 +1,4 @@
-const Logo = ({ color = "black", size = 60 }) => {
-  console.log("size : ", size);
-  
+const Logo = ({ color = "black", size = 60 }) => {  
   return (
     <img
       src="/knmg.svg"
