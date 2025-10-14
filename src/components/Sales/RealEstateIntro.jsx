@@ -1,3 +1,4 @@
+"use client"
 import Animate from "../Common/Animate";
 
 const RealEstateIntro = () => {
