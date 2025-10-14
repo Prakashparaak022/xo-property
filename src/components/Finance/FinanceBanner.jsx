@@ -4,9 +4,9 @@ export default function FinanceBanner() {
   return (
     <Banner
       banner={"/assets/images/finance/finance-banner.jpg"}
-      title={"Financing your property in Dubai"}
-      subtitle={"Comprehensive mortgage options with KNMG Property and Holo."}
-      primaryButton={{ title: "Explore mortgage options", link: "" }}
+      title={"Smart Property Financing in Dubai"}
+      subtitle={"Tailored home mortgage solutions with KNMG Property & Holo"}
+      primaryButton={{ title: "Discover financing options", link: "" }}
       secondaryButton={{ title: "Contact us", link: "contact" }}
     />
   );

@@ -2,6 +2,36 @@ import Animate from "../Common/Animate";
 import StyledButton from "../Common/StyledButton";
 
 const HoloMortgageBenefits = () => {
+  const whyTitle = "Why choose KNMG Property and Holo?";
+  const benifitsList = [
+    {
+      title: "Diverse mortgage Solutions",
+      content:
+        "Explore a wide spectrum of property financing options designed to match your financial goals and lifestyle needs.",
+    },
+    {
+      title: "Competitive Market Rates",
+      content:
+        "Get connected to the most favorable mortgage rates in Dubai, ensuring you maximize value on your investment.",
+    },
+    {
+      title: "Seamless Digital Process",
+      content:
+        "From application to approval, Holo’s tech-driven platform removes complexity, making your mortgage journey efficient and hassle-free.",
+    },
+    {
+      title: "Guidance You Can Trust",
+      content:
+        "At KNMG, we don’t just connect you to the right property—we stand beside you with expert advice throughout the financing process.",
+    },
+  ];
+
+  const title = "Begin Your Home Journey Today";
+  const content =
+    "Take your first step toward effortless property ownership in Dubai. With KNMG Property and Holo, your financing experience is simplified, secure, and tailored to you.";
+  const button1 = "Discover financing options";
+  const button2 = " Start your application";
+
   return (
     <div className="py-4 md:py-10">
       <div>
@@ -26,54 +56,21 @@ const HoloMortgageBenefits = () => {
             <div className="space-y-6">
               <Animate>
                 <h2 className="text-2xl md:text-4xl font-semibold mb-5">
-                  Why choose KNMG Property and Holo?
+                  {whyTitle}
                 </h2>
               </Animate>
               <Animate>
-                <p className="text-lg text-gray-700">
-                  <span className="font-semibold">
-                    Comprehensive mortgage options:
-                  </span>{" "}
-                  With <span className="font-semibold">Holo</span>, you can
-                  explore a wide range of{" "}
-                  <span className="font-semibold">
-                    property loan options in Dubai
-                  </span>
-                  , tailored to your financial situation.
-                </p>
-              </Animate>{" "}
-              <Animate>
-                <p className="text-lg text-gray-700">
-                  <span className="font-semibold">Best mortgage rates:</span>{" "}
-                  Holo’s platform connects you with the{" "}
-                  <span className="font-semibold">
-                    best mortgage loans in Dubai
-                  </span>
-                  , helping you find the ideal financing solution.
-                </p>
-              </Animate>{" "}
-              <Animate>
-                <p className="text-lg text-gray-700">
-                  <span className="font-semibold">
-                    Effortless application process:
-                  </span>{" "}
-                  Holo’s digital platform streamlines the mortgage application
-                  process, making it simple and stress-free to apply for a{" "}
-                  <span className="font-semibold">mortgage loan in Dubai.</span>
-                </p>
-              </Animate>{" "}
-              <Animate>
-                <p className="text-lg text-gray-700">
-                  <span className="font-semibold">Expert guidance:</span> As a
-                  client of KNMG Property, you’ll benefit from personalised
-                  support throughout your home-buying journey, from finding the
-                  perfect property to securing the right{" "}
-                  <span className="font-semibold">
-                    <a className="underline font-semibold">
-                      mortgage property in Dubai.
-                    </a>
-                  </span>
-                </p>
+                <ul className="list-disc pl-5 mt-2 text-lg text-gray-700 space-y-2">
+                  {benifitsList.map((list,i) => (
+                    <Animate key={i}>
+                      <li>
+                        <span className="font-semibold">{list.title}</span>
+                        {`: `}
+                        {list.content}
+                      </li>
+                    </Animate>
+                  ))}
+                </ul>
               </Animate>
             </div>
           </div>
@@ -86,21 +83,19 @@ const HoloMortgageBenefits = () => {
             <div className="space-y-6">
               <Animate>
                 <h2 className="text-2xl md:text-4xl font-semibold mb-5">
-                  Get started today!
+                  {title}
                 </h2>
               </Animate>
               <Animate>
-                <p className="text-lg text-gray-700">
-                  Take the first step toward financing your dream home with KNMG
-                  Property and <span className="font-semibold">Holo.</span>{" "}
-                  Click the button below to explore your mortgage options and
-                  start your application today!
-                </p>
+                <p className="text-lg text-gray-700">{content}</p>
               </Animate>
               <Animate>
-                <StyledButton variant="black-outlined">
-                  Explore mortage options
-                </StyledButton>
+                <div className="w-full flex flex-col md:flex-row gap-4 md:gap-6">
+                  <StyledButton variant="black-outlined">
+                    {button1}
+                  </StyledButton>
+                  <StyledButton variant="black-filled">{button2}</StyledButton>
+                </div>
               </Animate>
             </div>
           </div>
