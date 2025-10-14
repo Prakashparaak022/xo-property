@@ -8,7 +8,7 @@ const StyledButton = ({ variant = "white-filled", children }) => {
       buttonClasses = `bg-white text-black hover-bg hover:text-white ${baseClasses}`;
       break;
     case "black-filled":
-      buttonClasses = `bg-default text-white hover:bg-white hover:text-black ${baseClasses}`;
+      buttonClasses = `bg-default text-white hover:bg-white ${baseClasses}`;
       break;
     case "white-outlined":
       buttonClasses = `border border-white text-white hover-bg hover:border-black hover:text-white ${baseClasses}`;
