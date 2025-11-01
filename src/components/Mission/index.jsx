@@ -1,4 +1,4 @@
-import { FaBook, FaBriefcase, FaSearch } from "react-icons/fa";
+import { FaComments, FaHome, FaSearch } from "react-icons/fa";
 import Animate from "../Common/Animate";
 
 export default function Mission() {
@@ -13,11 +13,11 @@ export default function Mission() {
       title: "Get Personalized Property Matches",
     },
     {
-      icon: FaBook,
+      icon: FaComments,
       title: "Chat with a Property Expert",
     },
     {
-      icon: FaBriefcase,
+      icon: FaHome,
       title: "Request Private Showing",
     },
   ];
@@ -27,9 +27,7 @@ export default function Mission() {
       <Animate>
         <div className="lg:w-[70%]">
           <h1 className="text-2xl md:text-4xl font-semibold mb-1">{title}</h1>
-          <h1 className="text-xl md:text-3xl mb-5">
-            {subTitle}
-          </h1>
+          <h1 className="text-xl md:text-3xl mb-5">{subTitle}</h1>
           <p className="text-lg mb-4 text-gray-800">{content1}</p>
           <p className="text-lg mb-6 text-gray-800">{content2}</p>
           <button className="text-lg border border-black px-8 py-4 font-semibold w-full md:w-fit hover-bg hover:text-white transition cursor-pointer">
