@@ -14,7 +14,7 @@ export default function Home() {
       <Mission />
       <Stats />
       <About />
-      <FeaturedProperties />
+      {/* <FeaturedProperties /> */}
       <DubaiInspiration />
       <Valuation />
     </LayoutStyle1>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Animate from "../Common/Animate";
 
 export default function Valuation() {
@@ -18,9 +19,13 @@ export default function Valuation() {
             </p>
           </Animate>
           <Animate>
-            <button className="text-lg border border-black px-8 py-4 font-semibold w-full md:w-fit hover-bg hover:text-white transition cursor-pointer">
-              Free valuation
-            </button>
+            <Link
+              href="https://binghatti.realtree.ae/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lg border border-black px-8 py-4 font-semibold w-full md:w-fit hover-bg hover:text-white transition cursor-pointer">
+              Get Started
+            </Link>
           </Animate>
         </div>
 

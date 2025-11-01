@@ -1,7 +1,7 @@
 import Animate from "../Common/Animate";
 
 export default function About() {
-  const title = "Connecting You to Prime UAE Properties";
+  const title = "Your Gateway to Exclusive UAE Properties";
   const content1 =
     "Our UAE real estate brokerage offers personalized solutions for buying, selling, and renting properties across Dubai, Abu Dhabi, and other emirates. We specialize in investment advisory, property management, and lease services, ensuring seamless transactions and maximum value.";
   const content2 =

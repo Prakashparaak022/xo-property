@@ -10,15 +10,15 @@ export default function Mission() {
   const exploreList = [
     {
       icon: FaSearch,
-      title: "Find a Property",
+      title: "Get Personalized Property Matches",
     },
     {
       icon: FaBook,
-      title: "Book a Property Valuation",
+      title: "Chat with a Property Expert",
     },
     {
       icon: FaBriefcase,
-      title: "Careers at KNMG Property",
+      title: "Request Private Showing",
     },
   ];
   return (

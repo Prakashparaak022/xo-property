@@ -19,7 +19,7 @@ export default function Hero() {
           real estate journey with confidence.
         </p>
         {/* search Bar */}
-        <div className="bg-white text-black color-black rounded-md shadow-lg flex flex-wrap md:flex-nowrap items-center gap-2 p-3 md:p-4 w-full max-w-5xl">
+        {/* <div className="bg-white text-black color-black rounded-md shadow-lg flex flex-wrap md:flex-nowrap items-center gap-2 p-3 md:p-4 w-full max-w-5xl">
           <select className="rounded-md px-3 py-2 w-full md:w-auto">
             <option>Buy</option>
             <option>Rent</option>
@@ -41,7 +41,7 @@ export default function Hero() {
           <button className="border border-black text-black px-6 py-2 w-full md:w-auto font-semibold hover-bg hover:text-white transition">
             Search
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
