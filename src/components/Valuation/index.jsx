@@ -20,9 +20,7 @@ export default function Valuation() {
           </Animate>
           <Animate>
             <Link
-              href="https://binghatti.realtree.ae/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="property"
               className="text-lg border border-black px-8 py-4 font-semibold w-full md:w-fit hover-bg hover:text-white transition cursor-pointer">
               Get Started
             </Link>

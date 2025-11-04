@@ -38,6 +38,49 @@
   }
 }
 
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .animate-slideUpFade {
   animation: slideUpFade 0.8s ease forwards;
+}
+
+@keyframes slideLeftFade {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-slideLeftFade {
+  animation: slideLeftFade 0.8s ease forwards;
+}
+
+@keyframes slideRightFade {
+  0% {
+    opacity: 0;
+    transform: translate3d(100px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-slideRightFade {
+  animation: slideRightFade 0.8s ease forwards;
 }

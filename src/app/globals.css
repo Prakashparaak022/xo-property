@@ -3,6 +3,7 @@
 :root {
   --background: #003f3a;
   --text-highlight: #003f3a;
+  --text-secondary: #ffc72c;
 }
 
 .bg-default {

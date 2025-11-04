@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "title": "BINGHATTI SKYBLADE – DOWNTOWN",
+    "image": "/assets/images/properties/BINGHATTI-SKYBLADE.webp",
+    "community": "DOWNTOWN"
+  },
+  {
+    "id": 2,
+    "title": "BINGHATTI FLARE – JVT",
+    "image": "/assets/images/properties/BINGHATTI-FLARE.webp",
+    "community": "JVT"
+  },
+  {
+    "id": 3,
+    "title": "BINGHATTI MOONLIGHT – AL JADDAF",
+    "image": "/assets/images/properties/BINGHATTI-MOONLIGHT.webp",
+    "community": "AL JADDAF"
+  },
+  {
+    "id": 4,
+    "title": "BINGHATTI CIRCLE – JVC",
+    "image": "/assets/images/properties/BINGHATTI-CIRCLE.webp",
+    "community": "JVC"
+  },
+  {
+    "id": 5,
+    "title": "BINGHATTI RUBY – JVC",
+    "image": "/assets/images/properties/BINGHATTI-RUBY.webp",
+    "community": "JVC"
+  },
+  {
+    "id": 6,
+    "title": "BINGHATTI AMBER HALL – JVC",
+    "image": "/assets/images/properties/BINGHATTI-AMBER-HALL.webp",
+    "community": "JVC"
+  },
+  {
+    "id": 7,
+    "title": "BINGHATTI DUSK – JVC",
+    "image": "/assets/images/properties/BINGHATTI-DUSK.webp",
+    "community": "JVC"
+  },
+  {
+    "id": 8,
+    "title": "BINGHATTI DAWN – JVC",
+    "image": "/assets/images/properties/BINGHATTI-DAWN.webp",
+    "community": "JVC"
+  },
+  {
+    "id": 9,
+    "title": "BINGHATTI TWILIGHT – AL JADDAF",
+    "image": "/assets/images/properties/BINGHATTI-TWILIGHT.webp",
+    "community": "AL JADDAF"
+  },
+  {
+    "id": 10,
+    "title": "BINGHATTI STARLIGHT – AL JADDAF",
+    "image": "/assets/images/properties/BINGHATTI-STARLIGHT.webp",
+    "community": "AL JADDAF"
+  },
+  {
+    "id": 11,
+    "title": "BINGHATTI GHOST – AL JADDAF",
+    "image": "/assets/images/properties/BINGHATTI-GHOST.webp",
+    "community": "AL JADDAF"
+  },
+  {
+    "id": 12,
+    "title": "BINGHATTI IVORY – AL JADDAF",
+    "image": "/assets/images/properties/BINGHATTI-IVORY.webp",
+    "community": "AL JADDAF"
+  },
+  {
+    "id": 13,
+    "title": "MERCEDES-BENZ PLACES – DOWNTOWN",
+    "image": "/assets/images/properties/MERCEDES-BENZ-PLACES.webp",
+    "community": "DOWNTOWN"
+  },
+  {
+    "id": 14,
+    "title": "BINGHATTI AQUARISE – BUSINESS BAY",
+    "image": "/assets/images/properties/BINGHATTI-AQUARISE.webp",
+    "community": "BUSINESS BAY"
+  },
+  {
+    "id": 15,
+    "title": "BINGHATTI SKYHALL – BUSINESS BAY",
+    "image": "/assets/images/properties/BINGHATTI-SKYHALL.webp",
+    "community": "BUSINESS BAY"
+  },
+  {
+    "id": 16,
+    "title": "BINGHATTI SKYRISE – BUSINESS BAY",
+    "image": "/assets/images/properties/BINGHATTI-SKYRISE.webp",
+    "community": "BUSINESS BAY"
+  },
+  {
+    "id": 17,
+    "title": "BURJ BINGHATTI JACOB & CO RESIDENCES – BUSINESS BAY",
+    "image": "/assets/images/properties/BURJ-BINGHATTI-JACOB&CO-RESIDENCES.webp",
+    "community": "BUSINESS BAY"
+  },
+  {
+    "id": 18,
+    "title": "BUGATTI RESIDENCES – BUSINESS BAY",
+    "image": "/assets/images/properties/BUGATTI-RESIDENCES.webp",
+    "community": "BUSINESS BAY"
+  },
+  {
+    "id": 19,
+    "title": "TRILLIONAIRE RESIDENCES – BUSINESS BAY",
+    "image": "/assets/images/properties/TRILLIONAIRE-RESIDENCES.webp",
+    "community": "BUSINESS BAY"
+  },
+  {
+    "id": 20,
+    "title": "BINGHATTI LAQUATIQUE – BUSINESS BAY",
+    "image": "/assets/images/properties/BINGHATTI-LAQUATIQUE.webp",
+    "community": "BUSINESS BAY"
+  },
+  {
+    "id": 21,
+    "title": "BINGHATTI HILLVIEWS – DUBAI SCIENCE PARK",
+    "image": "/assets/images/properties/BINGHATTI-HILLVIEWS.webp",
+    "community": "DUBAI SCIENCE PARK"
+  },
+  {
+    "id": 22,
+    "title": "BINGHATTI HAVEN – SPORTS CITY",
+    "image": "/assets/images/properties/BINGHATTI-HAVEN.webp",
+    "community": "SPORTS CITY"
+  },
+  {
+    "id": 23,
+    "title": "BINGHATTI ELITE – IMPZ",
+    "image": "/assets/images/properties/BINGHATTI-ELITE.webp",
+    "community": "IMPZ"
+  },
+  {
+    "id": 24,
+    "title": "MORE OPTIONS",
+    "image": "/assets/images/properties/MORE-OPTIONS.webp",
+    "community": ""
+  }
+]
