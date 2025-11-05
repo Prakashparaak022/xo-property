@@ -2,16 +2,25 @@
 import React, { useState } from "react";
 import properties from "@/assets/json/properties.json";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import {
+  FaMapMarkerAlt,
+  FaMoneyBillWave,
+  FaBed,
+  FaChartPie,
+  FaClock,
+} from "react-icons/fa";
 import Animate from "../Common/Animate";
+import Form from "./Form";
 
 export default function PropertyWizard() {
   const [step, setStep] = useState(0);
   const steps = [
-    "Community",
-    "Budget",
-    "Bedrooms",
-    "Investments",
-    "Buying Time",
+    { label: "Community", icon: <FaMapMarkerAlt /> },
+    { label: "Budget", icon: <FaMoneyBillWave /> },
+    { label: "Bedrooms", icon: <FaBed /> },
+    { label: "Investments", icon: <FaChartPie /> },
+    { label: "Buying Time", icon: <FaClock /> },
+    { label: "Contact Form", icon: <FaClock /> },
   ];
 
   const budgets = [
@@ -65,35 +74,52 @@ export default function PropertyWizard() {
           Explore the most trending Properties by Binghatti
         </p>
 
-        {/* Progress Bar */}
-        <div className="mb-8 w-full">
-          <div className="w-full flex items-center justify-between gap-3 text-sm text-gray-500 pb-5">
-            {steps.map((s, i) => (
+        {/* Step Progress Bar */}
+        <div className="w-full flex items-center justify-between mb-10">
+          {steps.map((item, i) => (
+            <div key={i} className="flex flex-col items-center flex-1 relative">
+              {/* Left Line */}
+              {i !== 0 && (
+                <div
+                  className={`absolute left-0 top-5 h-[2px] w-1/2 
+                  ${
+                    i <= step ? "bg-[var(--text-secondary)]" : "bg-gray-300"
+                  }`}></div>
+              )}
+
+              {/* Right Line */}
+              {i !== steps.length - 1 && (
+                <div
+                  className={`absolute right-0 top-5 h-[2px] w-1/2 
+                  ${
+                    i < step ? "bg-[var(--text-secondary)]" : "bg-gray-300"
+                  }`}></div>
+              )}
+
+              {/* Circle */}
               <div
-                key={s}
-                className={`flex-1 text-center py-1 ${
-                  i === step ? "text-[var(--text-highlight)] font-semibold" : ""
+                className={`w-10 h-10 flex items-center justify-center rounded-full border-2 z-10
+                ${
+                  i === step
+                    ? "bg-[var(--text-secondary)] text-white"
+                    : i < step
+                    ? "bg-amber-600 text-white"
+                    : "bg-gray-200 border-gray-300 text-gray-700"
                 }`}>
-                {s}
+                {item.icon}
               </div>
-            ))}
-          </div>
 
-          <div className="relative w-full">
-            <div className="h-2 w-full bg-gray-200 rounded-full"></div>
-            <div
-              className="h-2 bg-amber-400 rounded-full absolute top-0 left-0 transition-all duration-300"
-              style={{ width: `${percent}%` }}></div>
-
-            <div
-              className="absolute flex flex-col items-center transition-all duration-300"
-              style={{ left: `calc(${percent}% - 8px)`, top: "-25px" }}>
-              <span className="text-amber-400 font-semibold text-sm">
-                {percent}%
+              {/* Label */}
+              <span
+                className={`mt-2 text-sm ${
+                  i === step
+                    ? "text-[var(--text-secondary)] font-semibold"
+                    : "text-gray-500"
+                }`}>
+                {item.label}
               </span>
-              <span className="w-4 h-4 bg-[var(--text-secondary)] rounded-full border-2 border-white"></span>
             </div>
-          </div>
+          ))}
         </div>
 
         {/* content card */}
@@ -182,6 +208,8 @@ export default function PropertyWizard() {
               next={next}
             />
           )}
+
+          {step === 5 && <Form />}
         </div>
 
         {/* navigation buttons */}
