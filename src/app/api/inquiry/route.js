@@ -13,7 +13,7 @@ export async function POST(req) {
   try {
     const { data, error } = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: ["prakash.muthusamy@oxfyn.com"],
+      to: ["hr@oxfyn.com"],
       subject: `New Property Inquiry from ${name}`,
       react: InquiryFormTemplate({
         name,
