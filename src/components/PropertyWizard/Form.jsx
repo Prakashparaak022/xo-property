@@ -2,6 +2,7 @@ import React from "react";
 import { Controller, useForm } from "react-hook-form";
 import { FaEnvelope, FaChevronDown } from "react-icons/fa";
 import { FaUser } from "react-icons/fa6";
+import { toast } from "react-toastify";
 
 const getTextFieldStyles = (error) => {
   return `w-full p-3 h-15 border rounded-[0.25rem] shadow-sm text-[0.9375rem] font-medium focus:outline-none
@@ -162,7 +163,7 @@ const countryOptions = [
   { code: "+91", label: "India", flagUrl: "https://flagcdn.com/w20/in.png" },
 ];
 
-export default function Form() {
+export default function Form({ preferences }) {
   const {
     control,
     formState: { errors, isSubmitting },
@@ -180,8 +181,27 @@ export default function Form() {
   });
 
   const onSubmit = async (formData) => {
-    console.log("formData : ", formData);
-    reset();
+    try {
+      const response = await fetch("/api/inquiry", {
+        method: "POST",
+        body: JSON.stringify({ ...formData, preferences }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        toast.success("Thanks for your message!");
+        reset();
+      } else {
+        toast.error("Failed to send. Please try again.");
+      }
+    } catch (err) {
+      toast.error("An unexpected error occurred.");
+      console.error("An unexpected error occurred: ", err);
+    }
   };
 
   return (
@@ -190,7 +210,7 @@ export default function Form() {
         Please fill in your details:
       </h2>
 
-      <p className="text-sm text-center text-gray-500">
+      <p className="font-medium text-gray-500 leading-[1.5] text-base">
         Fill in your information to view results and secure exclusive discounts!
       </p>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-2">
@@ -262,15 +282,46 @@ export default function Form() {
         <div className="text-center">
           <button
             type="submit"
-            className="w-full bg-amber-500 text-white p-2 rounded-[0.25rem] hover:bg-amber-600 hover:shadow-lg transition-all focus:outline-none"
+            disabled={isSubmitting}
+            className={`w-full text-white p-2 rounded-[0.25rem] hover:bg-amber-600 hover:shadow-lg transition-all focus:outline-none flex items-center justify-center gap-2
+            ${isSubmitting ? "opacity-70 cursor-not-allowed" : ""}`}
             style={{
               backgroundColor: "#f8c94d",
               boxShadow: "0 .1875rem .625rem 0 rgba(248, 201, 77, 0.5)",
             }}>
-            Send again
+            {isSubmitting ? (
+              <>
+                <Spinner />
+                Sending...
+              </>
+            ) : (
+              "Send again"
+            )}
           </button>
         </div>
       </form>
     </div>
   );
 }
+
+const Spinner = () => (
+  <div className="flex items-center gap-1">
+    <div className="w-1 h-4 bg-white animate-[wave_1s_ease-in-out_infinite]"></div>
+    <div className="w-1 h-4 bg-white animate-[wave_1s_ease-in-out_infinite_0.2s]"></div>
+    <div className="w-1 h-4 bg-white animate-[wave_1s_ease-in-out_infinite_0.4s]"></div>
+
+    <style jsx>{`
+      @keyframes wave {
+        0% {
+          transform: scaleY(0.4);
+        }
+        50% {
+          transform: scaleY(1);
+        }
+        100% {
+          transform: scaleY(0.4);
+        }
+      }
+    `}</style>
+  </div>
+);

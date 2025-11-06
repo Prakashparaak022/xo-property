@@ -51,12 +51,13 @@ export default function PropertyWizard() {
   ];
 
   const buyingTimes = ["Immediately", "This Month", "Within 1-3 Months"];
-
-  const [selectedCommunity, setSelectedCommunity] = useState(null);
-  const [selectedBudget, setSelectedBudget] = useState(null);
-  const [selectedBedroom, setSelectedBedroom] = useState(null);
-  const [selectedInvestment, setSelectedInvestment] = useState(null);
-  const [selectedBuyingTime, setSelectedBuyingTime] = useState(null);
+  const [preferences, setPreferences] = useState({
+    community: null,
+    budget: null,
+    bedroom: null,
+    investment: null,
+    buyingTime: null,
+  });
 
   const percent = Math.round((step / (steps.length - 1)) * 100);
 
@@ -68,11 +69,13 @@ export default function PropertyWizard() {
   }
 
   const buttonDisable =
-    (step === 0 && selectedCommunity === null) ||
-    (step === 1 && selectedBudget === null) ||
-    (step === 2 && selectedBedroom === null) ||
-    (step === 3 && selectedInvestment === null) ||
-    (step === 4 && selectedBuyingTime === null);
+    (step === 0 && preferences.community === null) ||
+    (step === 1 && preferences.budget === null) ||
+    (step === 2 && preferences.bedroom === null) ||
+    (step === 3 && preferences.investment === null) ||
+    (step === 4 && preferences.buyingTime === null);
+
+  console.log("preferences : ", preferences);
 
   return (
     <div className="min-h-screen bg-gray-50 py-6 px-6 lg:px-20">
@@ -113,8 +116,8 @@ export default function PropertyWizard() {
                       ? "bg-emerald-700 text-white"
                       : "bg-[var(--text-secondary)] text-white"
                     : i < step
-                    ? "bg-amber-600 text-white"
-                    : "bg-gray-200 border-gray-300 text-gray-700"
+                      ? "bg-amber-600 text-white"
+                      : "bg-gray-200 border-gray-300 text-gray-700"
                 }`}>
                 {item.icon}
               </div>
@@ -148,16 +151,19 @@ export default function PropertyWizard() {
               </Animate>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {properties.map((p) => (
-                  <Animate key={p.id} animation="slideRightFade">
+                  <Animate key={p.title} animation="slideRightFade">
                     <button
                       onClick={() => {
-                        setSelectedCommunity(p.id);
+                        setPreferences((prev) => ({
+                          ...prev,
+                          community: p.title,
+                        }));
                         setTimeout(() => {
                           next();
                         }, 300);
                       }}
                       className={`text-left rounded-md overflow-hidden border transition-shadow hover:shadow-md focus:outline-none ${
-                        selectedCommunity === p.id
+                        preferences.community === p.title
                           ? "border-2 border-[var(--text-secondary)] shadow-lg"
                           : "border border-gray-200"
                       }`}>
@@ -185,8 +191,8 @@ export default function PropertyWizard() {
               title={"Preferable Budget:"}
               name={"budget"}
               list={budgets}
-              selectedvalue={selectedBudget}
-              setSelectedValue={setSelectedBudget}
+              selectedvalue={preferences.budget}
+              setSelectedValue={setPreferences}
               next={next}
             />
           )}
@@ -196,8 +202,8 @@ export default function PropertyWizard() {
               title={"Number of bedroom preferred:"}
               name={"bedroom"}
               list={bedrooms}
-              selectedvalue={selectedBedroom}
-              setSelectedValue={setSelectedBedroom}
+              selectedvalue={preferences.bedroom}
+              setSelectedValue={setPreferences}
               next={next}
             />
           )}
@@ -207,8 +213,8 @@ export default function PropertyWizard() {
               title={"Purpose of Investment:"}
               name={"investment"}
               list={investments}
-              selectedvalue={selectedInvestment}
-              setSelectedValue={setSelectedInvestment}
+              selectedvalue={preferences.investment}
+              setSelectedValue={setPreferences}
               next={next}
             />
           )}
@@ -216,15 +222,15 @@ export default function PropertyWizard() {
           {step === 4 && (
             <RadioButtonList
               title={"How soon you are looking to buy?"}
-              name={"buy"}
+              name={"buyingTime"}
               list={buyingTimes}
-              selectedvalue={selectedBuyingTime}
-              setSelectedValue={setSelectedBuyingTime}
+              selectedvalue={preferences.buyingTime}
+              setSelectedValue={setPreferences}
               next={next}
             />
           )}
 
-          {step === 5 && <Form />}
+          {step === 5 && <Form preferences={preferences} />}
         </div>
 
         {/* navigation buttons */}
@@ -233,11 +239,13 @@ export default function PropertyWizard() {
             <button
               onClick={() => {
                 setStep(0);
-                setSelectedCommunity(null);
-                setSelectedBudget(null);
-                setSelectedBedroom(null);
-                setSelectedInvestment(null);
-                setSelectedBuyingTime(null);
+                setPreferences({
+                  community: null,
+                  budget: null,
+                  bedroom: null,
+                  investment: null,
+                  buyingTime: null,
+                });
               }}
               className="px-4 h-10 rounded-[0.25rem] border border-gray-300 bg-white">
               Reset
@@ -294,16 +302,19 @@ const RadioButtonList = ({
               <label
                 key={name}
                 className={`flex items-center gap-4 p-4 rounded-md border ${
-                  selectedvalue === index
+                  selectedvalue === item
                     ? "border-amber-300 bg-amber-50"
                     : "border-gray-200 bg-white"
                 }`}>
                 <input
                   type="radio"
                   name={name}
-                  checked={selectedvalue === index}
+                  checked={selectedvalue === item}
                   onChange={() => {
-                    setSelectedValue(index);
+                    setSelectedValue((prev) => ({
+                      ...prev,
+                      [name]: list[index],
+                    }));
                     setTimeout(() => {
                       next();
                     }, 300);
