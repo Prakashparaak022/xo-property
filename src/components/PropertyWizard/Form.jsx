@@ -63,6 +63,51 @@ const TextField = ({
   );
 };
 
+const PhoneNumberInput = ({
+  label,
+  name,
+  placeholder,
+  value,
+  onChange,
+  error,
+  type = "text",
+}) => {
+  return (
+    <div className="relative w-full">
+      <label htmlFor={name} className={labelStyles}>
+        {label}
+      </label>
+      <div className="relative w-full h-full flex items-center">
+        <div
+          className={`${getTextFieldStyles(
+            error
+          )} w-full flex items-center gap-2 max-w-26 rounded-[0.25rem] rounded-r-none border-r-0`}>
+          <img
+            src="https://flagcdn.com/w20/ae.png"
+            alt="UAE flag"
+            className="w-5 h-4 object-cover"
+          />
+          <span className="text-[0.9375rem] font-medium text-gray-700">
+            +971
+          </span>
+          <FaChevronDown className="text-gray-500 text-xs" />
+        </div>
+        <input
+          type={type}
+          id={name}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          className={`${getTextFieldStyles(
+            error
+          )} flex-1 rounded-l-none border-l-none`}
+        />
+      </div>
+      {error && <span className="text-red-600 text-sm">{error}</span>}
+    </div>
+  );
+};
+
 const formFields = [
   {
     id: "name",
@@ -130,6 +175,7 @@ export default function Form() {
       email: "",
       phone: "",
       cityCountry: "",
+      privacy: false,
     },
   });
 
@@ -139,7 +185,7 @@ export default function Form() {
   };
 
   return (
-    <div className="max-w-xl mx-auto mb-10 p-8 space-y-4 bg-white shadow-md rounded-[0.25rem]">
+    <div className="max-w-xl mx-auto mb-15 p-8 space-y-4 bg-white shadow-md rounded-[0.25rem]">
       <h2 className="text-2xl font-semibold text-center">
         Please fill in your details:
       </h2>
@@ -148,43 +194,25 @@ export default function Form() {
         Fill in your information to view results and secure exclusive discounts!
       </p>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-2">
-        {formFields.map((field) =>
-          field.id === "phone" ? (
-            <div key={field.id} className="w-full">
-              <label htmlFor="phone" className={labelStyles}>
-                {field.label}
-              </label>
-              <div
-                className={`w-full h-15 flex items-center border border-gray-300 rounded-[0.25rem] shadow-sm text-[0.9375rem] font-medium`}>
-                <div className="h-full flex items-center gap-2 px-4 border-r border-gray-300 bg-white">
-                  <img
-                    src="https://flagcdn.com/w20/ae.png"
-                    alt="UAE flag"
-                    className="w-5 h-4 object-cover"
-                  />
-                  <span className="text-[0.9375rem] font-medium text-gray-700">
-                    +971
-                  </span>
-                  <FaChevronDown className="text-gray-500 text-xs" />
-                </div>
-                <input
-                  id={field.id}
-                  type={field.type}
+        {formFields.map((field) => (
+          <Controller
+            key={field.id}
+            control={control}
+            name={field.name}
+            rules={field.rules}
+            render={({ field: { value, onChange }, fieldState: { error } }) =>
+              field.id === "phone" ? (
+                <PhoneNumberInput
+                  label={field.label}
+                  name={field.name}
                   placeholder={field.placeholder}
-                  className="w-full h-full flex-1 pl-2 rounded-r-[0.25rem] focus:outline-none focus:ring focus:ring-blue-500"
+                  icon={field.icon}
+                  value={value}
+                  onChange={onChange}
+                  error={error?.message}
+                  type={field.type}
                 />
-              </div>
-            </div>
-          ) : (
-            <Controller
-              key={field.id}
-              control={control}
-              name={field.name}
-              rules={field.rules}
-              render={({
-                field: { value, onChange },
-                fieldState: { error },
-              }) => (
+              ) : (
                 <TextField
                   label={field.label}
                   name={field.name}
@@ -195,25 +223,50 @@ export default function Form() {
                   error={error?.message}
                   type={field.type}
                 />
-              )}
-            />
-          )
-        )}
+              )
+            }
+          />
+        ))}
 
         {/* Privacy Policy Checkbox */}
-        <div className="mb-4 flex items-center">
-          <input type="checkbox" id="privacy" className="mr-2" />
-          <label htmlFor="privacy" className="text-sm text-gray-600">
-            I agree with the
-            <span className="text-blue-500">Privacy policy</span>
-          </label>
-        </div>
+        <Controller
+          control={control}
+          name="privacy"
+          rules={{ required: "You must agree to the Privacy Policy" }}
+          render={({ field: { value, onChange }, fieldState: { error } }) => (
+            <div className="mb-4">
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  id="privacy"
+                  checked={value ?? false}
+                  onChange={(e) => onChange(e.target.checked)}
+                  className="mr-2"
+                />
+                <label
+                  htmlFor="privacy"
+                  className="text-xs font-semibold text-gray-600">
+                  I agree with the
+                  <span className="text-blue-500"> Privacy policy</span>
+                </label>
+              </div>
+
+              {error && (
+                <p className="text-red-600 text-xs mt-1">{error.message}</p>
+              )}
+            </div>
+          )}
+        />
 
         {/* Submit Button */}
         <div className="text-center">
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white p-2 rounded-[0.25rem] hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            className="w-full bg-amber-500 text-white p-2 rounded-[0.25rem] hover:bg-amber-600 hover:shadow-lg transition-all focus:outline-none"
+            style={{
+              backgroundColor: "#f8c94d",
+              boxShadow: "0 .1875rem .625rem 0 rgba(248, 201, 77, 0.5)",
+            }}>
             Send again
           </button>
         </div>

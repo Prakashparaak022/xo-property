@@ -8,6 +8,7 @@ import {
   FaBed,
   FaChartPie,
   FaClock,
+  FaRegAddressCard,
 } from "react-icons/fa";
 import Animate from "../Common/Animate";
 import Form from "./Form";
@@ -20,7 +21,7 @@ export default function PropertyWizard() {
     { label: "Bedrooms", icon: <FaBed /> },
     { label: "Investments", icon: <FaChartPie /> },
     { label: "Buying Time", icon: <FaClock /> },
-    { label: "Contact Form", icon: <FaClock /> },
+    { label: "Contact Form", icon: <FaRegAddressCard /> },
   ];
 
   const budgets = [
@@ -101,7 +102,9 @@ export default function PropertyWizard() {
                 className={`w-10 h-10 flex items-center justify-center rounded-full border-2 z-10
                 ${
                   i === step
-                    ? "bg-[var(--text-secondary)] text-white"
+                    ? step === 5
+                      ? "bg-emerald-700 text-white"
+                      : "bg-[var(--text-secondary)] text-white"
                     : i < step
                     ? "bg-amber-600 text-white"
                     : "bg-gray-200 border-gray-300 text-gray-700"
@@ -113,7 +116,9 @@ export default function PropertyWizard() {
               <span
                 className={`mt-2 text-sm ${
                   i === step
-                    ? "text-[var(--text-secondary)] font-semibold"
+                    ? step === 5
+                      ? "text-emerald-700"
+                      : "text-[var(--text-secondary)] font-semibold"
                     : "text-gray-500"
                 }`}>
                 {item.label}
@@ -123,7 +128,10 @@ export default function PropertyWizard() {
         </div>
 
         {/* content card */}
-        <div className="bg-white rounded-lg shadow-sm p-6">
+        <div
+          className={`${
+            step === 5 ? "" : " bg-white shadow-sm p-6 rounded-lg"
+          }`}>
           {step === 0 && (
             <div>
               <Animate animation="fadeIn">
@@ -246,7 +254,7 @@ export default function PropertyWizard() {
             ) : (
               <button
                 onClick={() => alert("Submitted!")}
-                className="px-6 h-10 rounded-md bg-emerald-600 text-white font-semibold">
+                className="px-5 h-10 rounded-[0.25rem] bg-emerald-700 text-white font-semibold">
                 Submit
               </button>
             )}
