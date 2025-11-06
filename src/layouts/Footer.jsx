@@ -6,9 +6,9 @@ import Link from "next/link"; // For Next.js routing
 
 const Footer = () => {
   const navLinks = [
-    { name: "Sales", href: "/sales" },
+    // { name: "Sales", href: "/sales" },
     { name: "Off Plan", href: "/offplan" },
-    { name: "Finance", href: "/financing-property" },
+    // { name: "Finance", href: "/financing-property" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -24,7 +24,7 @@ const Footer = () => {
     <footer
       className="bg-default text-white py-8 px-4 md:px-4 lg:px-8 relative"
       style={{ boxShadow: "0px -4px 20px rgba(0, 0, 0, 0.1)" }}>
-      <div className="mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Column 1: What We Do */}
         <div>
           <h3 className="mb-2 text-lg font-semibold">What We Do</h3>
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
 
         {/* Column 2: About */}
-        <div>
+        {/* <div>
           <h3 className="mb-2 text-lg font-semibold">About</h3>
           <ul className="text-lg space-y-2">
             {aboutLinks.map((link) => (
@@ -59,7 +59,7 @@ const Footer = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
 
         {/* Column 3: Contact */}
         <div>
@@ -69,7 +69,7 @@ const Footer = () => {
             </h3>
             <p>(04) 433 0046</p>
             <p>info@knmgproperty.ae</p>
-            <p>Office No. 202, Daytona House, Motor City, Dubai, UAE</p>
+            {/* <p>Office No. 202, Daytona House, Motor City, Dubai, UAE</p> */}
           </ul>
         </div>
 

@@ -30,9 +30,9 @@ export default function Mission() {
           <h1 className="text-xl md:text-3xl mb-5">{subTitle}</h1>
           <p className="text-lg mb-4 text-gray-800">{content1}</p>
           <p className="text-lg mb-6 text-gray-800">{content2}</p>
-          <button className="text-lg border border-black px-8 py-4 font-semibold w-full md:w-fit hover-bg hover:text-white transition cursor-pointer">
+          {/* <button className="text-lg border border-black px-8 py-4 font-semibold w-full md:w-fit hover-bg hover:text-white transition cursor-pointer">
             Meet Our Team
-          </button>
+          </button> */}
         </div>
       </Animate>
 

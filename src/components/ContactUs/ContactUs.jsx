@@ -47,25 +47,21 @@ const ContactUs = () => {
         />
 
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-800">
-          <div>
+          {/* <div>
             <h2 className="text-xl font-semibold">
               KNMG Property Headquarters
             </h2>
             <p className="text-gray-600 mt-1">
               Office No. 202, Daytona House, Motor City, Dubai, UAE
             </p>
-          </div>
+          </div> */}
           <div>
             <div className="flex items-center justify-start space-x-1">
-              <button className="bg-white text-black rounded-full">
-                📞
-              </button>
+              <button className="bg-white text-black rounded-full">📞</button>
               <p className="font-semibold text-black"> (04) 565 3718</p>
             </div>
             <div className="flex items-center justify-start space-x-1">
-              <button className="bg-white text-black rounded-full">
-                📧
-              </button>
+              <button className="bg-white text-black rounded-full">📧</button>
               <p className="text-gray-600">info@knmgproperty.ae</p>
             </div>
           </div>
