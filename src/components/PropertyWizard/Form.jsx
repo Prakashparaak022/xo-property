@@ -205,7 +205,7 @@ export default function Form({ preferences }) {
   };
 
   return (
-    <div className="max-w-xl mx-auto mb-15 p-8 space-y-4 bg-white shadow-md rounded-[0.25rem]">
+    <div className="max-w-xl mx-auto mb-5 p-8 space-y-4 bg-white shadow-md rounded-[0.25rem]">
       <h2 className="text-2xl font-semibold text-center">
         Please fill in your details:
       </h2>

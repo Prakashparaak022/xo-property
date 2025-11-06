@@ -234,32 +234,33 @@ export default function PropertyWizard() {
         </div>
 
         {/* navigation buttons */}
-        <div className="fixed px-6 max-w-6xl mx-auto bottom-0 left-0 right-0 bg-white py-4 flex items-center justify-between z-50">
-          <div>
-            <button
-              onClick={() => {
-                setStep(0);
-                setPreferences({
-                  community: null,
-                  budget: null,
-                  bedroom: null,
-                  investment: null,
-                  buyingTime: null,
-                });
-              }}
-              className="px-4 h-10 rounded-[0.25rem] border border-gray-300 bg-white">
-              Reset
-            </button>
-          </div>
+        {step !== 5 && (
+          <div className="fixed px-6 max-w-6xl mx-auto bottom-0 left-0 right-0 bg-white py-4 flex items-center justify-between z-50">
+            <div>
+              <button
+                onClick={() => {
+                  setStep(0);
+                  setPreferences({
+                    community: null,
+                    budget: null,
+                    bedroom: null,
+                    investment: null,
+                    buyingTime: null,
+                  });
+                }}
+                className="px-4 h-10 rounded-[0.25rem] border border-gray-300 bg-white">
+                Reset
+              </button>
+            </div>
 
-          <div className="flex items-center gap-3">
-            <button
-              onClick={back}
-              disabled={step === 0}
-              className="px-3 h-10 rounded-[0.25rem] border border-gray-300 disabled:opacity-50 flex items-center gap-2">
-              <FiArrowLeft className="text-lg" />
-            </button>
-            {step < steps.length - 1 ? (
+            <div className="flex items-center gap-3">
+              <button
+                onClick={back}
+                disabled={step === 0}
+                className="px-3 h-10 rounded-[0.25rem] border border-gray-300 disabled:opacity-50 flex items-center gap-2">
+                <FiArrowLeft className="text-lg" />
+              </button>
+
               <button
                 onClick={next}
                 disabled={buttonDisable}
@@ -268,15 +269,9 @@ export default function PropertyWizard() {
                 <span className="hidden sm:inline">Next</span>
                 <FiArrowRight className="text-lg" />
               </button>
-            ) : (
-              <button
-                onClick={() => alert("Submitted!")}
-                className="px-5 h-10 rounded-[0.25rem] bg-emerald-700 text-white font-semibold">
-                Submit
-              </button>
-            )}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
