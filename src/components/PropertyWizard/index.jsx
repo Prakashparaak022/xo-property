@@ -67,6 +67,13 @@ export default function PropertyWizard() {
     if (step > 0) setStep((s) => s - 1);
   }
 
+  const buttonDisable =
+    (step === 0 && selectedCommunity === null) ||
+    (step === 1 && selectedBudget === null) ||
+    (step === 2 && selectedBedroom === null) ||
+    (step === 3 && selectedInvestment === null) ||
+    (step === 4 && selectedBuyingTime === null);
+
   return (
     <div className="min-h-screen bg-gray-50 py-6 px-6 lg:px-20">
       <div className="max-w-6xl mx-auto">
@@ -247,7 +254,9 @@ export default function PropertyWizard() {
             {step < steps.length - 1 ? (
               <button
                 onClick={next}
-                className="px-4 h-10 rounded-[0.25rem] bg-amber-500 text-white font-semibold flex items-center gap-2">
+                disabled={buttonDisable}
+                className={`px-4 h-10 rounded-[0.25rem] bg-amber-500 text-white font-semibold flex items-center gap-2
+                ${buttonDisable ? "opacity-40 cursor-not-allowed" : ""}`}>
                 <span className="hidden sm:inline">Next</span>
                 <FiArrowRight className="text-lg" />
               </button>
