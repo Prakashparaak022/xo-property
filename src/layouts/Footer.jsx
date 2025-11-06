@@ -67,7 +67,7 @@ const Footer = () => {
             <h3 className="mb-2 text-lg font-semibold">
               Contact KNMG Property
             </h3>
-            <p>(04) 433 0046</p>
+            <p>+971 50 939 5171</p>
             <p>info@knmgproperty.ae</p>
             {/* <p>Office No. 202, Daytona House, Motor City, Dubai, UAE</p> */}
           </ul>
@@ -101,10 +101,17 @@ const Footer = () => {
       {/* Floating Buttons */}
       <div className="fixed bottom-4 right-4 flex text-lg space-x-2">
         <button className="bg-green-500 text-white rounded-full p-3">
-          <FaWhatsapp className="text-2xl" />
+          <a
+            href="https://wa.me/919876543210"
+            target="_blank"
+            rel="noopener noreferrer">
+            <FaWhatsapp className="text-2xl" />
+          </a>
         </button>
         <button className="bg-white text-black rounded-full p-3">
-          <FaPhone className="text-2xl" />
+          <a href="tel:+919876543210">
+            <FaPhone className="text-2xl" />
+          </a>
         </button>
       </div>
     </footer>

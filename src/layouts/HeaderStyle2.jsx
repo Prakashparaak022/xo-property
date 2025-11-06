@@ -36,7 +36,11 @@ export default function HeaderStyle2() {
         </nav>
 
         {/* Right Side (WhatsApp) */}
-        <div className="hidden md:flex items-center space-x-2">
+        <a
+          href="https://wa.me/919876543210"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:flex items-center space-x-2">
           {/* WhatsApp Icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +65,7 @@ export default function HeaderStyle2() {
             className={`text-gray-700 hover:text-black transition duration-300`}>
             WhatsApp
           </span>
-        </div>
+        </a>
 
         {/* Mobile Menu Button */}
         <button
@@ -84,7 +88,11 @@ export default function HeaderStyle2() {
                 {link.name}
               </Link>
             ))}
-            <div className="flex items-center space-x-2 pt-2">
+            <a
+              href="https://wa.me/919876543210"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 pt-2">
               {/* WhatsApp Icon again for mobile */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +116,7 @@ export default function HeaderStyle2() {
                 className={`text-gray-700 hover:text-black transition duration-300`}>
                 WhatsApp
               </span>
-            </div>
+            </a>
           </nav>
         </div>
       )}

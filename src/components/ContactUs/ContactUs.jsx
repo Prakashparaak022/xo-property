@@ -58,7 +58,7 @@ const ContactUs = () => {
           <div>
             <div className="flex items-center justify-start space-x-1">
               <button className="bg-white text-black rounded-full">📞</button>
-              <p className="font-semibold text-black"> (04) 565 3718</p>
+              <p className="font-semibold text-black">+971 50 939 5171</p>
             </div>
             <div className="flex items-center justify-start space-x-1">
               <button className="bg-white text-black rounded-full">📧</button>
