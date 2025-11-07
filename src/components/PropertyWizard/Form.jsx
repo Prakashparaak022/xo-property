@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { FaEnvelope, FaChevronDown } from "react-icons/fa";
 import { FaUser } from "react-icons/fa6";
@@ -59,7 +60,7 @@ const TextField = ({
           </div>
         )}
       </div>
-      {error && <span className="text-red-600 text-sm">{error}</span>}
+      {error && <span className="text-red-600 text-xs mt-1">{error}</span>}
     </div>
   );
 };
@@ -73,25 +74,86 @@ const PhoneNumberInput = ({
   error,
   type = "text",
 }) => {
+  const [open, setOpen] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState(countryOptions[0]);
+
+  const handleSelect = (item) => {
+    setSelectedCountry(item);
+    setOpen(false);
+  };
+
+  const countryChange = (e) => {
+    const typed = e.target.value;
+
+    const match = countryOptions.find((item) => item.code === typed);
+
+    if (match) {
+      setSelectedCountry(match);
+    } else {
+      setSelectedCountry(() => ({ code: typed }));
+    }
+  };
+
   return (
     <div className="relative w-full">
       <label htmlFor={name} className={labelStyles}>
         {label}
       </label>
       <div className="relative w-full h-full flex items-center">
-        <div
-          className={`${getTextFieldStyles(
-            error
-          )} w-full flex items-center gap-2 max-w-26 rounded-[0.25rem] rounded-r-none border-r-0`}>
-          <img
-            src="https://flagcdn.com/w20/ae.png"
-            alt="UAE flag"
-            className="w-5 h-4 object-cover"
-          />
-          <span className="text-[0.9375rem] font-medium text-gray-700">
-            +971
-          </span>
-          <FaChevronDown className="text-gray-500 text-xs" />
+        <div className="relative w-full max-w-26">
+          {/* Selected Box */}
+          <div
+            onClick={() => setOpen(!open)}
+            className={`${getTextFieldStyles(error)} 
+              w-full max-w-full flex items-center gap-2 rounded-[0.25rem] rounded-r-none border-r-0 
+              p-2 cursor-pointer focus:outline-none`}>
+            <img
+              src={
+                selectedCountry.flagUrl ||
+                "https://cdn-icons-png.flaticon.com/512/44/44386.png"
+              }
+              alt="flag"
+              className="w-5 h-4 object-cover"
+              onError={(e) => {
+                e.target.src =
+                  "https://cdn-icons-png.flaticon.com/512/44/44386.png";
+              }}
+            />
+            <input
+              type="text"
+              value={selectedCountry.code}
+              onChange={countryChange}
+              className="max-w-full text-[0.9375rem] font-medium text-gray-700 
+                 outline-none border-none focus:outline-none"
+            />
+
+            <FaChevronDown
+              className={`text-gray-500 text-xs ml-auto transition-transform ${
+                open ? "rotate-180" : ""
+              }`}
+            />
+          </div>
+
+          {/* Dropdown List */}
+          {open && (
+            <div
+              className="absolute z-50 mt-1 w-full bg-white shadow-lg border rounded-md 
+                 max-h-48 overflow-auto no-scrollbar border-none">
+              {countryOptions.map((item) => (
+                <div
+                  key={item.code}
+                  onClick={() => handleSelect(item)}
+                  className="flex items-center gap-2 p-2 cursor-pointer hover:bg-amber-100 select-none">
+                  <img
+                    src={item.flagUrl}
+                    alt={`${item.code} flag`}
+                    className="w-5 h-4 object-cover"
+                  />
+                  <span className="text-sm text-gray-700">{item.code}</span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
         <input
           type={type}
@@ -104,7 +166,7 @@ const PhoneNumberInput = ({
           )} flex-1 rounded-l-none border-l-none`}
         />
       </div>
-      {error && <span className="text-red-600 text-sm">{error}</span>}
+      {error && <span className="text-red-600 text-xs">{error}</span>}
     </div>
   );
 };
@@ -159,8 +221,16 @@ const formFields = [
 
 const countryOptions = [
   { code: "+971", label: "UAE", flagUrl: "https://flagcdn.com/w20/ae.png" },
-  { code: "+1", label: "USA", flagUrl: "https://flagcdn.com/w20/us.png" },
   { code: "+91", label: "India", flagUrl: "https://flagcdn.com/w20/in.png" },
+  { code: "+86", label: "China", flagUrl: "https://flagcdn.com/w20/cn.png" },
+  {
+    code: "+966",
+    label: "Saudi Arabia",
+    flagUrl: "https://flagcdn.com/w20/sa.png",
+  },
+  { code: "+7", label: "Russia", flagUrl: "https://flagcdn.com/w20/ru.png" },
+  { code: "+92", label: "Pakistan", flagUrl: "https://flagcdn.com/w20/pk.png" },
+  { code: "+90", label: "Turkey", flagUrl: "https://flagcdn.com/w20/tr.png" },
 ];
 
 export default function Form({ preferences }) {

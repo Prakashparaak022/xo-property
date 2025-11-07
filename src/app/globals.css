@@ -18,6 +18,15 @@
   background: #002e2a;
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
 /* dark green 003f3a*/
 /* logo green 00594f*/
 
