@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "knmg  property",
-  description: "Real Estate Website",
+  title: "KNMG Property – Luxury Real Estate Brokerage in Dubai | Buy • Invest",
+  description:
+    "Experience Dubai’s finest properties with KNMG Property. From luxury homes to exclusive off-plan projects, our experts guide you every step of the way, making your real estate journey seamless and rewarding.",
 };
 
 export default function RootLayout({ children }) {
