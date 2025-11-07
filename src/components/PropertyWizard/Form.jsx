@@ -71,28 +71,33 @@ const PhoneNumberInput = ({
   placeholder,
   value,
   onChange,
+  countryCode,
+  setCountryCode,
   error,
   type = "text",
 }) => {
   const [open, setOpen] = useState(false);
-  const [selectedCountry, setSelectedCountry] = useState(countryOptions[0]);
 
   const handleSelect = (item) => {
-    setSelectedCountry(item);
+    setCountryCode(item);
     setOpen(false);
   };
 
   const countryChange = (e) => {
-    const typed = e.target.value;
+    const typed = e.target.value.replace(/\+/g, "");
+    const fullCode = "+" + typed;
 
-    const match = countryOptions.find((item) => item.code === typed);
+    const match = countryOptions.find((item) => item.code === fullCode);
 
     if (match) {
-      setSelectedCountry(match);
+      setCountryCode(match);
     } else {
-      setSelectedCountry(() => ({ code: typed }));
+      setCountryCode({ code: fullCode });
     }
   };
+
+  const countryCodeError =
+    !countryCode?.code || !/^\+\d{1,}$/.test(countryCode.code);
 
   return (
     <div className="relative w-full">
@@ -109,7 +114,7 @@ const PhoneNumberInput = ({
               p-2 cursor-pointer focus:outline-none`}>
             <img
               src={
-                selectedCountry.flagUrl ||
+                countryCode.flagUrl ||
                 "https://cdn-icons-png.flaticon.com/512/44/44386.png"
               }
               alt="flag"
@@ -121,7 +126,7 @@ const PhoneNumberInput = ({
             />
             <input
               type="text"
-              value={selectedCountry.code}
+              value={countryCode.code}
               onChange={countryChange}
               className="max-w-full text-[0.9375rem] font-medium text-gray-700 
                  outline-none border-none focus:outline-none"
@@ -166,7 +171,9 @@ const PhoneNumberInput = ({
           )} flex-1 rounded-l-none border-l-none`}
         />
       </div>
-      {error && <span className="text-red-600 text-xs">{error}</span>}
+      <span className="text-red-600 text-xs">
+        {countryCodeError ? "Country code is required" : error}
+      </span>
     </div>
   );
 };
@@ -220,17 +227,13 @@ const formFields = [
 ];
 
 const countryOptions = [
-  { code: "+971", label: "UAE", flagUrl: "https://flagcdn.com/w20/ae.png" },
-  { code: "+91", label: "India", flagUrl: "https://flagcdn.com/w20/in.png" },
-  { code: "+86", label: "China", flagUrl: "https://flagcdn.com/w20/cn.png" },
-  {
-    code: "+966",
-    label: "Saudi Arabia",
-    flagUrl: "https://flagcdn.com/w20/sa.png",
-  },
-  { code: "+7", label: "Russia", flagUrl: "https://flagcdn.com/w20/ru.png" },
-  { code: "+92", label: "Pakistan", flagUrl: "https://flagcdn.com/w20/pk.png" },
-  { code: "+90", label: "Turkey", flagUrl: "https://flagcdn.com/w20/tr.png" },
+  { code: "+971", flagUrl: "https://flagcdn.com/w20/ae.png" },
+  { code: "+91", flagUrl: "https://flagcdn.com/w20/in.png" },
+  { code: "+86", flagUrl: "https://flagcdn.com/w20/cn.png" },
+  { code: "+966", flagUrl: "https://flagcdn.com/w20/sa.png" },
+  { code: "+7", flagUrl: "https://flagcdn.com/w20/ru.png" },
+  { code: "+92", flagUrl: "https://flagcdn.com/w20/pk.png" },
+  { code: "+90", flagUrl: "https://flagcdn.com/w20/tr.png" },
 ];
 
 export default function Form({ preferences }) {
@@ -250,11 +253,18 @@ export default function Form({ preferences }) {
     },
   });
 
+  const [countryCode, setCountryCode] = useState(countryOptions[0]);
+
   const onSubmit = async (formData) => {
+    const fullPhone = `${countryCode.code}${formData.phone}`;
     try {
       const response = await fetch("/api/inquiry", {
         method: "POST",
-        body: JSON.stringify({ ...formData, preferences }),
+        body: JSON.stringify({
+          ...formData,
+          phone: fullPhone,
+          preferences,
+        }),
         headers: {
           "Content-Type": "application/json",
         },
@@ -299,6 +309,8 @@ export default function Form({ preferences }) {
                   icon={field.icon}
                   value={value}
                   onChange={onChange}
+                  countryCode={countryCode}
+                  setCountryCode={setCountryCode}
                   error={error?.message}
                   type={field.type}
                 />
