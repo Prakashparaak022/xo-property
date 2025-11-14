@@ -12,7 +12,7 @@ export default function Home() {
     <LayoutStyle1>
       <Hero />
       <Mission />
-      <Stats />
+      {/* <Stats /> */}
       <About />
       {/* <FeaturedProperties /> */}
       <DubaiInspiration />

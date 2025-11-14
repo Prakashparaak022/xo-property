@@ -12,7 +12,7 @@ const Sales = () => {
       <main>
         <SalesBanner />
         <RealEstateIntro />
-        <Stats />
+        {/* <Stats /> */}
         <PropertyOverview />
         <FeaturedProperties />
         <ListProperty />
