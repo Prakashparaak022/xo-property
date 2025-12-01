@@ -75,8 +75,6 @@ export default function PropertyWizard() {
     (step === 3 && preferences.investment === null) ||
     (step === 4 && preferences.buyingTime === null);
 
-  console.log("preferences : ", preferences);
-
   return (
     <div className="min-h-screen bg-gray-50 py-6 px-6 lg:px-20">
       <div className="max-w-6xl mx-auto">
