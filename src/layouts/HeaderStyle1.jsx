@@ -59,7 +59,7 @@ export default function HeaderStyle1() {
 
         {/* Right Side (WhatsApp) */}
         <a
-          href="https://wa.me/919876543210"
+          href="https://wa.me/971509395171"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:flex items-center space-x-2">
@@ -115,7 +115,7 @@ export default function HeaderStyle1() {
             ))}
             {/* WhatsApp Icon again for mobile */}
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/971509395171"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 pt-2">

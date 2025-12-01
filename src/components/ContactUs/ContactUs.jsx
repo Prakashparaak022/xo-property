@@ -60,10 +60,10 @@ const ContactUs = () => {
               <button className="bg-white text-black rounded-full">📞</button>
               <p className="font-semibold text-black">+971 50 939 5171</p>
             </div>
-            <div className="flex items-center justify-start space-x-1">
+            {/* <div className="flex items-center justify-start space-x-1">
               <button className="bg-white text-black rounded-full">📧</button>
               <p className="text-gray-600">info@knmgproperty.ae</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

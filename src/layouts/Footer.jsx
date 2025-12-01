@@ -68,13 +68,13 @@ const Footer = () => {
               Contact KNMG Property
             </h3>
             <p>+971 50 939 5171</p>
-            <p>info@knmgproperty.ae</p>
+            {/* <p>info@knmgproperty.ae</p> */}
             {/* <p>Office No. 202, Daytona House, Motor City, Dubai, UAE</p> */}
           </ul>
         </div>
 
         {/* Column 4: Social */}
-        <div>
+        {/* <div>
           <h3 className="mb-2 text-lg font-semibold">Social</h3>
           <div className="flex space-x-4">
             <FaYoutube className="text-5xl bg-white text-black rounded-full p-3" />
@@ -82,7 +82,7 @@ const Footer = () => {
             <FaInstagram className="text-5xl bg-white text-black rounded-full p-3" />
             <FaLinkedin className="text-5xl bg-white text-black rounded-full p-3" />
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Popular Searches */}
@@ -102,14 +102,14 @@ const Footer = () => {
       <div className="fixed bottom-4 right-4 flex text-lg space-x-2">
         <button className="bg-green-500 text-white rounded-full p-3">
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/971509395171"
             target="_blank"
             rel="noopener noreferrer">
             <FaWhatsapp className="text-2xl" />
           </a>
         </button>
         <button className="bg-white text-black rounded-full p-3">
-          <a href="tel:+919876543210">
+          <a href="tel:+971509395171">
             <FaPhone className="text-2xl" />
           </a>
         </button>
