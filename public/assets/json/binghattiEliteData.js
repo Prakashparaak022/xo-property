@@ -35,7 +35,7 @@ export const binghattiEliteData = [
     ],
   },
   {
-    banner : "/assets/images/offers/binghatti-elite.jpeg",
+    banner : "/assets/images/offers/binghatti-elite.webp",
     title: <>Why Binghatti Elite</>,
     subtitle: "",
     paraTitle: <>Architecture That Performs</>,

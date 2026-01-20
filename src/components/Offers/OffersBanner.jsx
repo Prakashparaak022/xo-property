@@ -3,7 +3,7 @@ import Banner from "./Banner";
 export default function OffersBanner() {
   return (
     <Banner
-      banner={"/assets/images/offers/banner.jpeg"}
+      banner={"/assets/images/offers/banner.webp"}
       title="Binghatti Elite"
       subtitle={
         <>
