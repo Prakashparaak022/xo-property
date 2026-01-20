@@ -11,7 +11,8 @@ export default function HeaderStyle2() {
     // { name: "Sales", href: "/sales" },
     { name: "Off Plan", href: "/offplan" },
     // { name: "Finance", href: "/financing-property" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/contact" },    { name: "Offers", href: "/offers/binghatti-elite" },
+
   ];
 
   return (

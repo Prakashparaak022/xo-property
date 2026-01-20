@@ -13,6 +13,7 @@ export default function HeaderStyle1() {
     { name: "Off Plan", href: "/offplan" },
     // { name: "Finance", href: "/financing-property" },
     { name: "Contact", href: "/contact" },
+    { name: "Offers", href: "/offers/binghatti-elite" },
   ];
 
   // Detect scroll position

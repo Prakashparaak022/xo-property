@@ -1,5 +1,11 @@
 "use client";
-import { cloneElement, useState, useEffect, useRef } from "react";
+import {
+  cloneElement,
+  useState,
+  useEffect,
+  useRef,
+  isValidElement,
+} from "react";
 
 const Animate = ({
   delay = "0s",
@@ -27,8 +33,17 @@ const Animate = ({
     };
   }, []);
 
+  // ❗ Guard: if not a valid React element, wrap it
+  if (!isValidElement(children)) {
+    return (
+      <span className={isInView ? `animate-${animation}` : "opacity-0"}>
+        {children}
+      </span>
+    );
+  }
+
   const mergedStyle = {
-    ...children.props.style,
+    ...(children.props?.style || {}),
     ...(isInView && {
       animationDelay: delay,
       animationDuration: duration,
@@ -36,7 +51,7 @@ const Animate = ({
   };
 
   const mergedClassName = [
-    children.props.className,
+    children.props?.className,
     isInView ? `animate-${animation}` : "opacity-0",
   ]
     .filter(Boolean)
@@ -50,7 +65,6 @@ const Animate = ({
   };
 
   return cloneElement(children, {
-    ...children.props,
     ref: mergedRef,
     style: mergedStyle,
     className: mergedClassName,
